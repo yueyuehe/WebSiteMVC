@@ -20,6 +20,8 @@ namespace WebSiteEntity
         public string WebUrl { get; set; }
         // 网站logo
         public string Logo { get; set; }
+        //title
+        public string Title { get; set; }
         // 地址栏图标
         public string Icon { get; set; }
         // 网站关键词
@@ -37,6 +39,7 @@ namespace WebSiteEntity
         //其他信息
         public string Others { get; set; }
 
+        //创建时间
         public DateTime? CreateDate { get; set; }
     }
 }

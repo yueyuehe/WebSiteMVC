@@ -15,8 +15,7 @@
         // 
         //如果您想要针对其他数据库和/或数据库提供程序，请在应用程序配置文件中修改“DataContext”
         //连接字符串。
-        private DataContext()
-            : base("name=WebSite")
+        public DataContext(): base("name=WebSite")
         {
         }
 
@@ -44,8 +43,7 @@
         //的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=390109。
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
-        public virtual DbSet<WebSite> WebSite
-        { get; set; }
+        public virtual DbSet<WebSite> WebSite{ get; set; }
         public virtual DbSet<WebColumn> WebColumn { get; set; }
         public virtual DbSet<WebModule> WebModule { get; set; }
     }
