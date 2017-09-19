@@ -10,7 +10,7 @@ using WebSiteDAL.Interface;
 
 namespace WebSiteBLL.Implements
 {
-    public class BaseBll<T> : IBaseBll<T>
+    public class BaseBll<T> : IBaseBll<T> where T:class,new()
     {
         private IBaseDal<T> dal = new BaseDal<T>();
         public void Add(T entity)

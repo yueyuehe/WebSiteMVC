@@ -7,7 +7,7 @@ using WebSiteEntity;
 
 namespace WebSiteBLL.Interface
 {
-    interface IWebColumnBll:IBaseBll<WebColumn>
+    public interface IWebColumnBll:IBaseBll<WebColumn>
     {
     }
 }

@@ -11,21 +11,41 @@ namespace UnitTest
         [TestMethod]
         public void TestInit()
         {
-            DataContext context = new DataContext();
-           var tra = context.Database.BeginTransaction();
+           var  context = DataContext.Create();
+            var tra = context.Database.BeginTransaction();
             var webColumn = new WebColumn();
-            webColumn.Name = "测试测试栏目1";
+            webColumn.Name = "测试测试栏目11";
             var webSite = new WebSite();
-            webSite.Name = "测试网站3";
+            webSite.Name = "测试网站33";
 
 
             var webModule = new WebModule();
-            webModule.Name = "测试模块2";
+            webModule.Name = "测试模块22";
             context.WebColumn.Add(webColumn);
             context.WebSite.Add(webSite);
             context.WebModule.Add(webModule);
             context.SaveChanges();
             tra.Commit();
         }
+        [TestMethod]
+        public void testStatic()
+        {
+            A.name = "12";
+            var a1 = new A();
+
+            var a2 = new A();
+
+
+
+
+        }
+
+
     }
+    public class A
+    {
+        public static string name { get; set; }
+
+    }
+
 }

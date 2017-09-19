@@ -7,7 +7,7 @@ using WebSiteEntity;
 
 namespace WebSiteBLL.Interface
 {
-    interface IWebSiteBll : IBaseBll<WebSite>
+   public interface IWebSiteBll : IBaseBll<WebSite>
     {
     }
 }

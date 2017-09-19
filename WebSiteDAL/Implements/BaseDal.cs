@@ -10,7 +10,7 @@ namespace WebSiteDAL.Implements
 {
     public class BaseDal<T> : IBaseDal<T> where T :class,new()
     {
-        private DataContext context = new DataContext();
+        private DataContext context = DataContext.Create();
         public void Add(T entity)
         {
             context.Set<T>().Add(entity);

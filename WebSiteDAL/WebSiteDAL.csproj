@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBContextFactory.cs" />
     <Compile Include="Implements\BaseDal.cs" />
     <Compile Include="DataContext.cs" />
     <Compile Include="Interface\IBaseDal.cs" />

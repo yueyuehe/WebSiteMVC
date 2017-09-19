@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CommonController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -183,12 +184,28 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Css\flexslider.css" />
+    <Content Include="Content\Css\font-awesome.min.css" />
+    <Content Include="Content\Css\metinfo.css" />
+    <Content Include="Content\Css\online.css" />
+    <Content Include="Content\Image\1342516529.png" />
+    <Content Include="Content\Image\1422258315.jpg" />
+    <Content Include="Content\Image\1422258414.jpg" />
+    <Content Include="Content\Image\1422258511.jpg" />
+    <Content Include="Content\Image\1422258610.jpg" />
+    <Content Include="Content\JavaScript\common.js" />
+    <Content Include="Content\JavaScript\ini.js" />
+    <Content Include="Content\JavaScript\min.js" />
+    <Content Include="Content\JavaScript\online-css.js" />
+    <Content Include="Content\JavaScript\online.js" />
+    <Content Include="Content\JavaScript\own.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\JavaScript\sea.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -235,6 +252,9 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Common\TopNav.cshtml" />
+    <Content Include="Views\Common\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Common_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -247,6 +267,16 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebSiteBLL\WebSiteBLL.csproj">
+      <Project>{370d8757-b349-41fb-9f43-042d285efeef}</Project>
+      <Name>WebSiteBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebSiteEntity\WebSiteEntity.csproj">
+      <Project>{fd77807c-3626-47af-950a-d2763837a4b2}</Project>
+      <Name>WebSiteEntity</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
