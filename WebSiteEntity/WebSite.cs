@@ -20,14 +20,16 @@ namespace WebSiteEntity
         public string WebUrl { get; set; }
         // 网站logo
         public string Logo { get; set; }
-        //title
-        public string Title { get; set; }
         // 地址栏图标
         public string Icon { get; set; }
+        //SEO
+        //title
+        public string Title { get; set; }
         // 网站关键词
         public string Keyword { get; set; }
         // 网站描述
         public string Description { get; set; }
+       
         //版权信息
         public string Copyright { get; set; }
         //地址邮编

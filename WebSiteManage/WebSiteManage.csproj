@@ -389,6 +389,7 @@
     <Content Include="Content\js\plugins\validate\jquery.validate.min.js" />
     <Content Include="Content\js\plugins\validate\messages_zh.min.js" />
     <Content Include="Content\js\plugins\webuploader\index.html" />
+    <Content Include="Content\js\plugins\webuploader\Uploader.swf" />
     <Content Include="Content\js\plugins\webuploader\webuploader.min.js" />
     <Content Include="Content\js\welcome.min.js" />
     <Content Include="Content\plugins\fullavatareditor\scripts\fullAvatarEditor.js" />
@@ -401,9 +402,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Content\css\plugins\footable\fonts\footable.eot" />
     <Content Include="Content\css\plugins\footable\fonts\footable.ttf" />
     <Content Include="Content\css\plugins\footable\fonts\footable.woff" />
@@ -446,11 +444,13 @@
     <Content Include="Views\WebColumn\Index.cshtml" />
     <Content Include="Views\WebColumn\AddUI.cshtml" />
     <Content Include="Views\WebColumn\UpdateUI.cshtml" />
+    <Content Include="Views\WebSite\AddUI.cshtml" />
+    <Content Include="Views\WebSite\UpdateUI.cshtml" />
+    <Content Include="Views\WebSite\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\WebSite\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
