@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WebSiteDAL.Interface;
+using WebSiteEntity;
 
 namespace WebSiteDAL.Implements
 {
-    class WebModuleDal
+    public class WebModuleDal : BaseDal<WebModule>, IWebModuleDal
     {
     }
 }

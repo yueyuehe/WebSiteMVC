@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using System.Web;
+using System.Runtime.Remoting.Messaging;
 
-namespace WebSiteBLL
+namespace Common
 {
-    public class Class1
+    public class FileHelper
     {
+       
     }
 }

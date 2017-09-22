@@ -11,7 +11,7 @@ namespace UnitTest
         [TestMethod]
         public void TestInit()
         {
-           var  context = DataContext.Create();
+           var  context = DBContextFactory.GetCurrentContext();
             var tra = context.Database.BeginTransaction();
             var webColumn = new WebColumn();
             webColumn.Name = "测试测试栏目11";

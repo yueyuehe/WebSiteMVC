@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBContextFactory.cs" />
+    <Compile Include="DbSession.cs" />
+    <Compile Include="IDbSession.cs" />
     <Compile Include="Implements\BaseDal.cs" />
     <Compile Include="DataContext.cs" />
     <Compile Include="Interface\IBaseDal.cs" />

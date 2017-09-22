@@ -17,16 +17,17 @@
     <link href="~/Content/css/plugins/iCheck/custom.css" rel="stylesheet">
     <link href="~/Content/css/animate.min.css" rel="stylesheet">
     <link href="~/Content/css/style.min862f.css?v=4.1.0" rel="stylesheet">
-    <link href="~/Content/css/plugins/summernote/summernote.css" rel="stylesheet">
+    <link href="~/Content/plugins/summernote/summernote.css" rel="stylesheet" />
+    @*<link href="~/Content/css/plugins/summernote/summernote.css" rel="stylesheet">*@
     <link href="~/Content/css/plugins/summernote/summernote-bs3.css" rel="stylesheet">
-    <link href="~/Content/css/plugins/webuploader/webuploader.css" rel="stylesheet" />
+
 </head>
 
 <body class="gray-bg">
     <div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
             <div class="col-sm-12">
-                <form method="get" class="form-horizontal">
+                <form method="post" class="form-horizontal" enctype="multipart/form-data">
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
                             <h3>网站基本信息设置</h3>
@@ -35,44 +36,30 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">网站名称</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="Name">
                                 </div>
                             </div>
+                            <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">网站URL</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="WebUrl">
                                 </div>
                             </div>
-                            <div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">网站Logo</label>
-                                    <div class="col-sm-4">
-                                        <div id="webLogo" class="uploader-list"></div>
-                                        <div id="fileWebLogo" name="WebLogo">选择图片</div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label">网站Icon</label>
-                                    <div class="col-sm-4">
-                                        <div id="webIcon" class="uploader-list"></div>
-                                        <div id="fileWebIcon" name="WebIcon">选择图片</div>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">网站Logo</label>
                                 <div class="col-sm-4">
-                                    <input type="file" name="WebLogo" />
+                                    <input type="file" accept="image/gif,image/jpg,image/png,image/bmp" name="WebLogo" />
                                 </div>
                             </div>
+                            <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">网站Icon</label>
                                 <div class="col-sm-4">
-                                    <input type="file" name="WebIcon"/>
+                                    <input type="file" accept="image/gif,image/jpg,image/png,image/bmp" name="WebIcon" />
                                 </div>
                             </div>
-
                             <div>
 
                                 @*
@@ -459,19 +446,23 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Title</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="Title">
                                 </div>
                             </div>
+                            <div class="hr-line-dashed"></div>
+
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">关键词</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="Keyword">
                                 </div>
                             </div>
+                            <div class="hr-line-dashed"></div>
+
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">描述</label>
                                 <div class="col-sm-4">
-                                    <textarea class="form-control" rows="3"></textarea>
+                                    <textarea class="form-control" rows="3" name="Description"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -482,37 +473,56 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">版权信息</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="Copyright">
                                 </div>
                             </div>
+                            <div class="hr-line-dashed"></div>
+
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">地址</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="Place">
                                 </div>
                             </div>
+                            <div class="hr-line-dashed"></div>
+
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">邮箱</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="ZipCode">
                                 </div>
                             </div>
+                            <div class="hr-line-dashed"></div>
+
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">联系电话</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="Phone">
                                 </div>
                             </div>
+                            <div class="hr-line-dashed"></div>
+
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">邮编</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control">
+                                    <input type="text" class="form-control" name="Email">
                                 </div>
                             </div>
+                            <div class="hr-line-dashed"></div>
+
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">其他</label>
                                 <div class="col-sm-10">
                                     <div id="OtherSummernote"></div>
+                                </div>
+                                <input type="hidden" id="summernoteContent" />
+                            </div>
+                        </div>
+                        <div class="ibox-title">
+                            <div class="form-group">
+                                <div class="col-sm-4 col-sm-offset-2">
+                                    <button id="btnSave" class="btn btn-sm btn-primary" type="button">保存内容</button>
+                                    <button class="btn btn-sm btn-white" type="button">取消</button>
                                 </div>
                             </div>
                         </div>
@@ -527,24 +537,46 @@
     <script src="~/Content/js/bootstrap.min.js?v=3.3.6"></script>
     <script src="~/Content/js/content.min.js?v=1.0.0"></script>
     <script src="~/Content/js/plugins/iCheck/icheck.min.js"></script>
-    <script src="~/Content/js/plugins/summernote/summernote.min.js"></script>
-    <script src="~/Content/js/plugins/summernote/summernote-zh-CN.js"></script>
-    <script src="~/Content/js/plugins/webuploader/webuploader.min.js"></script>
+    <script src="~/Content/plugins/summernote/summernote.min.js"></script>
+    <script src="~/Content/plugins/summernote/lang/summernote-zh-CN.js"></script>
 
+    @*<script src="~/Content/js/plugins/summernote/summernote.min.js"></script>*@
+    @*<script src="~/Content/js/plugins/summernote/summernote-zh-CN.js"></script>*@
     <script>
-
 
         $(document).ready(
             function () {
-                $("#OtherSummernote").summernote({ lang: "zh-CN", height: "150px" })
+                //  $("#OtherSummernote").summernote({
+                //      lang: "zh-CN", height: "150px",
+                //
+                //  })
+
+                $('#OtherSummernote').summernote({
+                    lang: "zh-CN", height: "150px",
+                    toolbar: [
+                      // [groupName, [list of button]]
+                      ['style', ['bold', 'italic', 'underline', 'clear']],
+                      ['font', ['strikethrough', 'superscript', 'subscript']],
+                      ['fontsize', ['fontsize']],
+                      ['color', ['color']],
+                      ['para', ['ul', 'ol', 'paragraph']],
+                      ['height', ['height']]
+                    ]
+                });
 
                 $(".i-checks").iCheck(
                     {
                         checkboxClass: "icheckbox_square-green",
                         radioClass: "iradio_square-green",
                     });
-
-
+                $("#btnSave").bind("click", function () {
+                    var form = $("form");
+                    var actionUrl = "/WebSite/Add";
+                    form.attr("action", actionUrl);
+                    var markupStr = $('#OtherSummernote').summernote('code');
+                    $("#summernoteContent").val(markupStr);
+                    form.submit();
+                })
 
             });
     </script>

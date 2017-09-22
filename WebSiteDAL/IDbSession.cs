@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WebSiteEntity;
 
-namespace WebSiteBLL.Interface
+namespace WebSiteDAL
 {
-   public interface IWebSiteBll : IBaseBll<WebSite>
+    public interface IDbSession
     {
-       
+        int SaveChange();
     }
 }
