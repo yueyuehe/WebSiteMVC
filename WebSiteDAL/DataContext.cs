@@ -19,20 +19,7 @@
         {
         }
 
-        /// <summary>
-        /// 创建DataContext 获取的是当前请求的DataContext
-        /// </summary>
-        /// <returns></returns>
-        public static DataContext Create()
-        {
-            DataContext dbContext = CallContext.GetData("DbContext") as DataContext;
-            if (dbContext == null)
-            {
-                dbContext = new DataContext();
-                CallContext.SetData("DbContext", dbContext);
-            }
-            return dbContext;
-        }
+       
 
    
         /// <summary>

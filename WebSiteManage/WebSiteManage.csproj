@@ -396,6 +396,15 @@
     <Content Include="Content\plugins\fullavatareditor\scripts\jQuery.Cookie.js" />
     <Content Include="Content\plugins\fullavatareditor\scripts\swfobject.js" />
     <Content Include="Content\plugins\fullavatareditor\scripts\test.js" />
+    <Content Include="Content\plugins\summernote\lang\summernote-zh-CN.js" />
+    <Content Include="Content\plugins\summernote\summernote-bs4.css" />
+    <Content Include="Content\plugins\summernote\summernote-bs4.js" />
+    <Content Include="Content\plugins\summernote\summernote-bs4.min.js" />
+    <Content Include="Content\plugins\summernote\summernote-lite.css" />
+    <Content Include="Content\plugins\summernote\summernote-lite.js" />
+    <Content Include="Content\plugins\summernote\summernote.css" />
+    <Content Include="Content\plugins\summernote\summernote.js" />
+    <Content Include="Content\plugins\summernote\summernote.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -418,6 +427,9 @@
     <Content Include="Content\fonts\glyphicons-halflings-regulard41d.eot" />
     <Content Include="Content\js\plugins\layer\laydate-v1.1.zip" />
     <Content Include="Content\js\plugins\layer\laydate-v1.1\layDate官网.url" />
+    <Content Include="Content\plugins\summernote\font\summernote.eot" />
+    <Content Include="Content\plugins\summernote\font\summernote.ttf" />
+    <Content Include="Content\plugins\summernote\font\summernote.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -450,6 +462,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\plugins\summernote\plugin\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -468,6 +481,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{7e0e2612-b5f2-437d-974a-befe9a5cbb52}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebSiteBLL\WebSiteBLL.csproj">
       <Project>{370d8757-b349-41fb-9f43-042d285efeef}</Project>
       <Name>WebSiteBLL</Name>
