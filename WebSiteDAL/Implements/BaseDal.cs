@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -10,13 +11,11 @@ namespace WebSiteDAL.Implements
 {
     public class BaseDal<T> : IBaseDal<T> where T :class,new()
     {
-        private DataContext context = DBContextFactory.getCurrentContext();
+        private DbContext context = DBContextFactory.GetCurrentContext();
         public void Add(T entity)
         {
             context.Set<T>().Add(entity);
         }
-
-      
         
 
         public void Delete(T entity)

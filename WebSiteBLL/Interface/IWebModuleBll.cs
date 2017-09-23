@@ -9,5 +9,6 @@ namespace WebSiteBLL.Interface
 {
     public interface IWebModuleBll:IBaseBll<WebModule>
     {
+     
     }
 }

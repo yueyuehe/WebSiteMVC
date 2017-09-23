@@ -6,37 +6,24 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebSiteBLL.Implements;
+using WebSiteBLL.Interface;
 using WebSiteEntity;
 
 namespace WebSiteManage.Controllers
 {
     public class WebSiteController : Controller
     {
-        private WebSiteBll bll = new WebSiteBll();
+        private IWebSiteBll bll = new WebSiteBll();
         // GET: WebSite
-        public ActionResult Index()
+        public ActionResult Index(int id)
         {
+            var webSite = bll.Find(model => model.Id == id);
+
             return View();
         }
-        public ActionResult AddUI()
+   
+        public ActionResult AddOrUpdate(WebSite webSite)
         {
-            return View();
-        }
-        public ActionResult UpdateUI()
-        {
-            return View();
-        }
-        public ActionResult Add(WebSite webSite)
-        {
-            var id = Request["Id"] ?? "";
-            if (string.IsNullOrEmpty(id))
-            {
-                bll.Add(webSite);
-            }
-            else
-            {
-                bll.Update(webSite);
-            }
             //保存文件到项目
             HttpPostedFileBase webLogFile = Request.Files["WebLogo"] as HttpPostedFileBase;
             HttpPostedFileBase webIconFile = Request.Files["WebIcon"] as HttpPostedFileBase;
@@ -54,7 +41,16 @@ namespace WebSiteManage.Controllers
             {
                 webSite.Logo = IconPath;
             }
-            return View();
+            if (bll.IsExist(webSite.Id))
+            {
+                bll.Update(webSite);
+            }
+            else
+            {
+                bll.Add(webSite);
+            }
+
+            return View("Index");
         }
 
         /// <summary>
@@ -86,12 +82,9 @@ namespace WebSiteManage.Controllers
         }
 
 
-        public ActionResult Update()
+        public ActionResult Delete(int id)
         {
-            return View();
-        }
-        public ActionResult Delete()
-        {
+            bll.Delete(id);
             return View();
         }
     }

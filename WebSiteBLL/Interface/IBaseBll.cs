@@ -16,5 +16,25 @@ namespace WebSiteBLL.Interface
         void Delete(T Entity);
 
         IQueryable<T> Find(Expression<Func<T, bool>> where);
+
+        /*********子类共有的常用方法但又不能通过公共方法实现************/
+        /// <summary>
+        /// 判断该Id的对象是否存在
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        bool IsExist(int id);
+
+        /// <summary>
+        /// 根据ID删除
+        /// </summary>
+        /// <param name="id"></param>
+        void Delete(int id);
+
+        /// <summary>
+        /// 根据ID查找
+        /// </summary>
+        /// <param name="id"></param>
+        T FindById(int id);
     }
 }

@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IDbSession.cs" />
     <Compile Include="Implements\BaseBll.cs" />
     <Compile Include="Implements\WebColumnBll.cs" />
     <Compile Include="Implements\WebModuleBll.cs" />

@@ -26,6 +26,7 @@
     <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -456,8 +457,6 @@
     <Content Include="Views\WebColumn\Index.cshtml" />
     <Content Include="Views\WebColumn\AddUI.cshtml" />
     <Content Include="Views\WebColumn\UpdateUI.cshtml" />
-    <Content Include="Views\WebSite\AddUI.cshtml" />
-    <Content Include="Views\WebSite\UpdateUI.cshtml" />
     <Content Include="Views\WebSite\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
