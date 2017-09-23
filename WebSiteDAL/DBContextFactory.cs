@@ -27,9 +27,9 @@ namespace WebSiteDAL
         /// 创建DataContext 获取的是当前请求的DataContext
         /// </summary>
         /// <returns></returns>
-        public static DbContext getCurrentContext()
+        public static DataContext getCurrentContext()
         {
-            DbContext dbContext = CallContext.GetData("DbContext") as DataContext;
+            DataContext dbContext = CallContext.GetData("DbContext") as DataContext;
             if (dbContext == null)
             {
                 dbContext = new DataContext();

@@ -40,11 +40,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModuleType.cs" />
+    <Compile Include="Module\Article.cs" />
+    <Compile Include="Module\CurriculumVitae.cs" />
+    <Compile Include="Module\Download.cs" />
+    <Compile Include="Module\Feedback.cs" />
+    <Compile Include="Module\Case.cs" />
+    <Compile Include="Module\Job.cs" />
+    <Compile Include="Module\Link.cs" />
+    <Compile Include="Module\Member.cs" />
+    <Compile Include="Module\Message.cs" />
+    <Compile Include="Module\Produce.cs" />
+    <Compile Include="Module\Search.cs" />
+    <Compile Include="Module\Sitemap.cs" />
+    <Compile Include="Module\Summary.cs" />
+    <Compile Include="NavPosition.cs" />
+    <Compile Include="WebData.cs" />
     <Compile Include="WebModule.cs" />
     <Compile Include="WebColunm.cs" />
     <Compile Include="WebSite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -6,20 +6,23 @@ using System.Threading.Tasks;
 
 namespace WebSiteEntity
 {
-    public class WebModule
+    public enum NavPosition
     {
-        public int Id { get; set; }
         /// <summary>
-        /// 名称
+        /// 头导航栏
         /// </summary>
-        public ModuleType ModuleType { get; set; }
+        TopNav,
         /// <summary>
-        /// 目录
+        ///  底部导航条
         /// </summary>
-        public string Catalog { get; set; }
+        BottomNav,
         /// <summary>
-        /// 排序
+        /// 不放在导航条
         /// </summary>
-        public int Sort { get; set; }
+        NoneNav,
+        /// <summary>
+        /// 都显示
+        /// </summary>
+        BothNav,
     }
 }

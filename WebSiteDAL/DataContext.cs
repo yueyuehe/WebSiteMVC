@@ -18,10 +18,6 @@
         public DataContext(): base("name=WebSite")
         {
         }
-
-       
-
-   
         /// <summary>
         /// 事务问题以后解决
         /// </summary>

@@ -43,5 +43,6 @@ namespace WebSiteEntity
 
         //创建时间
         public DateTime? CreateDate { get; set; }
+
     }
 }
