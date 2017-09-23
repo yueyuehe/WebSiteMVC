@@ -12,7 +12,7 @@ namespace WebSiteDAL
         /// <summary>
         /// 获取DBContent
         /// </summary>
-        private static DataContext DbContent
+        public static DataContext DbContent
         {
             get
             {

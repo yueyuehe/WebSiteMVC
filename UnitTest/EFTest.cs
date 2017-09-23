@@ -19,10 +19,9 @@ namespace UnitTest
 
             var webSite = new WebSite();
             webSite.Name = "测试网站33";
-            webSite.imagesssss = new List<string>() {"asd","asd","sss","dsd" };
 
             var webModule = new WebModule();
-            webModule.Name = "测试模块22";
+            //webModule.Name = "测试模块22";
             context.WebColumn.Add(webColumn);
             context.WebSite.Add(webSite);
             context.WebModule.Add(webModule);
