@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WebSiteDAL;
 using WebSiteEntity;
+using System.Collections.Generic;
 
 namespace UnitTest
 {
@@ -15,9 +16,10 @@ namespace UnitTest
             var tra = context.Database.BeginTransaction();
             var webColumn = new WebColumn();
             webColumn.Name = "测试测试栏目11";
+
             var webSite = new WebSite();
             webSite.Name = "测试网站33";
-
+            webSite.imagesssss = new List<string>() {"asd","asd","sss","dsd" };
 
             var webModule = new WebModule();
             webModule.Name = "测试模块22";
