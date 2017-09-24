@@ -26,7 +26,7 @@ namespace WebSiteBLL.Implements
             var query = Find(model => model.Id == id);
             if (query.Count() > 0)
             {
-                dal.Delete(query.ToList()[0]);
+                this.Delete(query.ToList()[0]);
             }
         }
 
