@@ -31,21 +31,19 @@ namespace UnitTest
         [TestMethod]
         public void testStatic()
         {
-            A.name = "12";
-            var a1 = new A();
+          
 
-            var a2 = new A();
-
-
+     
 
 
         }
 
 
     }
-    public class A
+    public enum A
     {
-        public static string name { get; set; }
+      name,
+      age
 
     }
 

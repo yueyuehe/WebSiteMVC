@@ -13,14 +13,20 @@ namespace WebSiteMVC.Controllers
         public ActionResult TopNav()
         {
             var site = new WebSite();
-            site.Title ="我的测试网站";
+            site.Title = "我的测试网站";
             site.Name = "XXX网站";
-            site.Logo = @"~\Content\Image\1342516529.png"; 
+            site.Logo = @"~\Content\Image\1342516529.png";
             var columnList = new List<WebColumn>();
-            
+
 
 
             return View();
         }
+        public ActionResult Header()
+        {
+            return View();
+        }
+
+
     }
 }

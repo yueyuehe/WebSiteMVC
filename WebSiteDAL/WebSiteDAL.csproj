@@ -32,9 +32,11 @@
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -54,6 +56,7 @@
     <Compile Include="IDbSession.cs" />
     <Compile Include="Implements\BaseDal.cs" />
     <Compile Include="DataContext.cs" />
+    <Compile Include="Implements\Module\ArticleDal.cs" />
     <Compile Include="Interface\IBaseDal.cs" />
     <Compile Include="Implements\WebColumnDal.cs" />
     <Compile Include="Implements\WebSiteDal.cs" />
@@ -61,6 +64,7 @@
     <Compile Include="Interface\IWebColumnDal.cs" />
     <Compile Include="Interface\IWebModuleDal.cs" />
     <Compile Include="Interface\IWebSiteDal.cs" />
+    <Compile Include="Interface\Module\IArticleDal.cs" />
     <Compile Include="Migrations\201709190242527_InitialCreate.cs" />
     <Compile Include="Migrations\201709190242527_InitialCreate.Designer.cs">
       <DependentUpon>201709190242527_InitialCreate.cs</DependentUpon>

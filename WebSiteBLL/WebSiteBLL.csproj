@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implements\BaseBll.cs" />
+    <Compile Include="Implements\Module\ArticleBll.cs" />
     <Compile Include="Implements\WebColumnBll.cs" />
     <Compile Include="Implements\WebModuleBll.cs" />
     <Compile Include="Implements\WebSiteBll.cs" />
@@ -48,6 +50,7 @@
     <Compile Include="Interface\IWebColumnBll.cs" />
     <Compile Include="Interface\IWebModuleBll.cs" />
     <Compile Include="Interface\IWebSiteBll.cs" />
+    <Compile Include="Interface\Module\IArticleBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -60,6 +63,7 @@
       <Name>WebSiteEntity</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

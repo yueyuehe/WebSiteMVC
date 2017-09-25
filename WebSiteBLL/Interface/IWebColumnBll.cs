@@ -7,8 +7,13 @@ using WebSiteEntity;
 
 namespace WebSiteBLL.Interface
 {
-    public interface IWebColumnBll:IBaseBll<WebColumn>
+    public interface IWebColumnBll : IBaseBll<WebColumn>
     {
-       
+        /// <summary>
+        /// 根据ID找到相关联的父栏目和子栏目
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        List<WebColumn> FindChildAndParent(int id);
     }
 }

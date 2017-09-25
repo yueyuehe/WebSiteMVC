@@ -167,15 +167,24 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Common.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ArticleController.cs" />
+    <Compile Include="Controllers\CaseController.cs" />
     <Compile Include="Controllers\CommonController.cs" />
+    <Compile Include="Controllers\DownloadController.cs" />
+    <Compile Include="Controllers\FeedbackController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JobController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MemberController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\ProduceController.cs" />
+    <Compile Include="Controllers\SummaryController.cs" />
     <Compile Include="Controllers\WebManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -194,11 +203,13 @@
     <Content Include="Content\Image\1422258414.jpg" />
     <Content Include="Content\Image\1422258511.jpg" />
     <Content Include="Content\Image\1422258610.jpg" />
-    <Content Include="Content\JavaScript\common.js" />
-    <Content Include="Content\JavaScript\ini.js" />
-    <Content Include="Content\JavaScript\min.js" />
-    <Content Include="Content\JavaScript\online-css.js" />
-    <Content Include="Content\JavaScript\online.js" />
+    <Content Include="Content\JavaScript\effects\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\JavaScript\effects\include\common.js" />
+    <Content Include="Content\JavaScript\effects\include\ini.js" />
+    <Content Include="Content\JavaScript\effects\include\min.js" />
+    <Content Include="Content\JavaScript\effects\oline\online-css.js" />
+    <Content Include="Content\JavaScript\effects\oline\online.js" />
+    <Content Include="Content\JavaScript\jquery\1.11.1\jquery.js" />
     <Content Include="Content\JavaScript\own.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -256,10 +267,22 @@
     <Content Include="Views\Common\TopNav.cshtml" />
     <Content Include="Views\Common\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Common_Layout.cshtml" />
+    <Content Include="Views\Common\Footer.cshtml" />
+    <Content Include="Views\Common\Tem_Banner.cshtml" />
+    <Content Include="Views\Article\Index.cshtml" />
+    <Content Include="Views\Common\Header.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\" />
+    <Folder Include="Views\Case\" />
+    <Folder Include="Views\Download\" />
+    <Folder Include="Views\Feedback\" />
+    <Folder Include="Views\Job\" />
+    <Folder Include="Views\Member\" />
+    <Folder Include="Views\Message\" />
+    <Folder Include="Views\Produce\" />
+    <Folder Include="Views\Summary\" />
     <Folder Include="Views\WebManage\" />
   </ItemGroup>
   <ItemGroup>

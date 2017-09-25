@@ -6,6 +6,7 @@
     using System.Linq;
     using System.Runtime.Remoting.Messaging;
     using WebSiteEntity;
+    using WebSiteEntity.Module;
 
     public class DataContext : DbContext
     {
@@ -15,7 +16,7 @@
         // 
         //如果您想要针对其他数据库和/或数据库提供程序，请在应用程序配置文件中修改“DataContext”
         //连接字符串。
-        public DataContext(): base("name=WebSite")
+        public DataContext() : base("name=WebSite")
         {
         }
         /// <summary>
@@ -26,9 +27,11 @@
         //的详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=390109。
 
         // public virtual DbSet<MyEntity> MyEntities { get; set; }
-        public virtual DbSet<WebSite> WebSite{ get; set; }
+        public virtual DbSet<WebSite> WebSite { get; set; }
         public virtual DbSet<WebColumn> WebColumn { get; set; }
         public virtual DbSet<WebModule> WebModule { get; set; }
+        
+        public virtual DbSet<Article> Article { get; set; }
     }
 
     //public class MyEntity

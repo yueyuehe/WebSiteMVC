@@ -1,0 +1,123 @@
+﻿@using WebSiteEntity;
+@using WebSiteEntity.Module;
+@{
+    Layout = "~/Views/Shared/Common_Layout.cshtml";
+
+    var articles = (List<Article>)ViewData["articles"];
+    var one_level = (WebColumn)ViewData["one_level"];
+    var second_level = (List<WebColumn>)ViewData["second_level"];
+    var third_level = (List<WebColumn>)ViewData["third_level"];
+}
+
+<section class="met_section">
+    <aside>
+        <section class="met_aside">
+            <h2>新闻资讯</h2>
+            <div class="met_aside_list">
+                <dl class="list-none navnow">
+                    <dt id='part2_4'>
+                        <a href='../news/news.php?lang=cn&class2=4' title='公司动态' class="zm">
+                            <span>公司动态</span>
+                        </a>
+                    </dt>
+                </dl>
+                <dl class="list-none navnow">
+                    <dt id='part2_5'>
+                        <a href='../news/news.php?lang=cn&class2=5' title='业界资讯' class="zm">
+                            <span>业界资讯</span>
+                        </a>
+                    </dt>
+                </dl>
+                <div class="met_clear"></div>
+            </div>
+        </section>
+    </aside>
+
+    <article>
+        <div class="met_article">
+            <section class="met_article_head">
+                <h1>新闻资讯</h1>
+                <div class="met_position">
+                    <a href="http://demo.metinfo.cn/" title="网站首页">网站首页</a> &gt;
+                    <a href="../news">新闻资讯</a>
+                </div>
+            </section>
+
+            <div class="met_clear"></div>
+
+            <div class="met_module2_list">
+                <ul>
+
+                    <li class="list_1">
+
+                        <h2><a href="shownews.php?lang=cn&id=9" title="企业网站应该多长时间备份一次？" target='_self'><i class="fa fa-caret-right"></i>企业网站应该多长时间备份一次？</a></h2>
+
+                        <span class='time'>2013-12-26</span>
+                    </li>
+
+                    <li class="list_1">
+
+                        <h2><a href="shownews.php?lang=cn&id=10" title="如何选择网站关键词?" target='_self'><i class="fa fa-caret-right"></i>如何选择网站关键词?</a></h2>
+
+                        <span class='time'>2013-12-26</span>
+                    </li>
+
+                    <li class="list_1">
+
+                        <h2><a href="shownews.php?lang=cn&id=1" title="为什么企业要建多国语言网站？" target='_self'><i class="fa fa-caret-right"></i>为什么企业要建多国语言网站？</a></h2>
+
+                        <span class='time'>2013-12-26</span>
+                    </li>
+
+                    <li class="list_1">
+
+                        <h2><a href="shownews.php?lang=cn&id=5" title="MetInfo企业建站系统有何优势？" target='_self'><i class="fa fa-caret-right"></i>MetInfo企业建站系统有何优势？</a></h2>
+
+                        <span class='time'>2013-12-26</span>
+                    </li>
+
+                    <li class="list_1">
+
+                        <h2><a href="shownews.php?lang=cn&id=21" title="企业用网站进行网络宣传的优势" target='_self'><i class="fa fa-caret-right"></i>企业用网站进行网络宣传的优势</a></h2>
+
+                        <span class='time'>2013-12-26</span>
+                    </li>
+
+                    <li class="list_1">
+
+                        <h2><a href="shownews.php?lang=cn&id=6" title="企业用网站进行网络宣传的优势" target='_self'><i class="fa fa-caret-right"></i>企业用网站进行网络宣传的优势</a></h2>
+
+                        <span class='time'>2013-12-26</span>
+                    </li>
+
+                    <li class="list_1">
+
+                        <h2><a href="shownews.php?lang=cn&id=22" title="什么是伪静态？伪静态有何作用?" target='_self'><i class="fa fa-caret-right"></i>什么是伪静态？伪静态有何作用?</a></h2>
+
+                        <span class='time'>2013-12-26</span>
+                    </li>
+
+                    <li class="list_1">
+
+                        <h2><a href="shownews.php?lang=cn&id=7" title="什么是伪静态？伪静态有何作用?" target='_self'><i class="fa fa-caret-right"></i>什么是伪静态？伪静态有何作用?</a></h2>
+
+                        <span class='time'>2013-12-26</span>
+                    </li>
+
+                </ul>
+
+                <div class='met_pager'>
+                    <span class='PreSpan'>上一页</span><a href=../news/ class='Ahover'>1</a><a href=news.php?lang =cn&class1 =2&page =2>2</a><a href=news.php?lang =cn&class1 =2&page =2 class='NextA'>下一页</a>
+                    <span class='PageText'>转至第</span>
+                    <input type='text' id='metPageT' data-pageurl='news.php?lang=cn&class1=2&page=||2' value='1' />
+                    <input type='button' id='metPageB' value='页' />
+                </div>
+
+            </div>
+
+        </div>
+    </article>
+    <div class="met_clear"></div>
+</section>
+
+
