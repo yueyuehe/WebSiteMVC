@@ -283,7 +283,6 @@
     <Folder Include="Views\Message\" />
     <Folder Include="Views\Produce\" />
     <Folder Include="Views\Summary\" />
-    <Folder Include="Views\WebManage\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
