@@ -1,31 +1,580 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<section class="tem_index_about">
+    <div class="tem_inner">
+        <h3 class="tem_index_title">
+            <span>
+                关于我们
+                <p></p>
+            </span>
+        </h3>
+        <div class="tem_index_about_cont ">
+            <div class="tem_index_about_txt ">
+                <div class="met_editor">
+                    <div style="color: rgb(51, 51, 51); font-size: 12px; line-height: 24px; padding-top: 10px;">
+                        <span style="font-size: 14px;"><strong>关于&ldquo;为合作伙伴创造价值&rdquo;</strong></span>
+                    </div>
+                    <div style="color: rgb(51, 51, 51); font-size: 12px; line-height: 24px;">
+                        米拓信息认为客户、供应商、公司股东、公司员工等一切和自身有合作关系的单位和个人都是自己的合作伙伴，并只有通过努力为合作伙伴创造价值，才能体现自身的价值并获得发展和成功。<br />
+                        <br />
+                        <div>
+                            <span style="font-size: 14px;"><strong>关于&ldquo;诚实、宽容、创新、服务&rdquo;</strong></span>
+                        </div>
+                        <div>
+                            米拓信息认为诚信是一切合作的基础，宽容是解决问题的前提，创新是发展事业的利器，服务是创造价值的根本。
+                        </div>
+                    </div>
+                    <br /><div class="met_clear"></div>
+                    <h4 class="tem_index_about_more"><a href="about/show.php?lang=cn&id=19" title="了解更多" target='_self'>了解更多</a></h4>
+                </div>
+            </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+            <div class="tem_index_about_img">
+                <ul>
+                    <li><img src="upload/201501/1422258315.jpg" /></li>
+
+                    <li><img src="upload/201501/1422258414.jpg" /></li>
+
+                    <li><img src="upload/201501/1422258511.jpg" /></li>
+
+                </ul>
+
+                <ol>
+
+                    <li class="tem_now"><img src="upload/201501/1422258315.jpg" /><i class="fa fa-caret-left"></i></li>
+
+                    <li><img src="upload/201501/1422258414.jpg" /><i class="fa fa-caret-left"></i></li>
+
+                    <li><img src="upload/201501/1422258511.jpg" /><i class="fa fa-caret-left"></i></li>
+
+                </ol>
+
+            </div>
+
+            <div class="met_clear"></div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+</section>
+
+<section class="tem_index_product tem_index_to">
+    <div class="tem_inner">
+        <h3 class="tem_index_title">
+            <span>
+                推荐产品
+                <p></p>
+            </span>
+        </h3>
+        <ul data-product_x="220">
+
+            <li class="">
+                <a href="product/showproduct.php?lang=cn&id=14" title="示例产品六" target='_self'>
+                    <img src="include/thumb.php?dir=../upload/201207/1342404422.jpg&x=220&y=200" title="示例产品六" alt="示例产品六" width="220" height="200" />
+                    <h2>示例产品六</h2>
+                </a>
+            </li>
+
+            <li class="">
+                <a href="product/showproduct.php?lang=cn&id=13" title="示例产品八" target='_self'>
+                    <img src="include/thumb.php?dir=../upload/201207/1342405015.jpg&x=220&y=200" title="示例产品八" alt="示例产品八" width="220" height="200" />
+                    <h2>示例产品八</h2>
+                </a>
+            </li>
+
+            <li class="">
+                <a href="product/showproduct.php?lang=cn&id=3" title="示例产品七" target='_self'>
+                    <img src="include/thumb.php?dir=../upload/201207/1342404422.jpg&x=220&y=200" title="示例产品七" alt="示例产品七" width="220" height="200" />
+                    <h2>示例产品七</h2>
+                </a>
+            </li>
+
+            <li class="">
+                <a href="product/showproduct.php?lang=cn&id=2" title="示例产品三" target='_self'>
+                    <img src="include/thumb.php?dir=../upload/201207/1342404144.jpg&x=220&y=200" title="示例产品三" alt="示例产品三" width="220" height="200" />
+                    <h2>示例产品三</h2>
+                </a>
+            </li>
+
+            <li class="">
+                <a href="product/showproduct.php?lang=cn&id=1" title="示例产品五" target='_self'>
+                    <img src="include/thumb.php?dir=../upload/201207/1342360923.jpg&x=220&y=200" title="示例产品五" alt="示例产品五" width="220" height="200" />
+                    <h2>示例产品五</h2>
+                </a>
+            </li>
+
+            <li class="">
+                <a href="product/showproduct.php?lang=cn&id=4" title="示例产品四" target='_self'>
+                    <img src="include/thumb.php?dir=../upload/201207/1342405015.jpg&x=220&y=200" title="示例产品四" alt="示例产品四" width="220" height="200" />
+                    <h2>示例产品四</h2>
+                </a>
+            </li>
+
+            <li class="">
+                <a href="product/showproduct.php?lang=cn&id=15" title="示例产品二" target='_self'>
+                    <img src="include/thumb.php?dir=../upload/201207/1342404144.jpg&x=220&y=200" title="示例产品二" alt="示例产品二" width="220" height="200" />
+                    <h2>示例产品二</h2>
+                </a>
+            </li>
+
+            <li class="">
+                <a href="product/showproduct.php?lang=cn&id=16" title="示例产品一" target='_self'>
+                    <img src="include/thumb.php?dir=../upload/201207/1342360923.jpg&x=220&y=200" title="示例产品一" alt="示例产品一" width="220" height="200" />
+                    <h2>示例产品一</h2>
+                </a>
+            </li>
+
+        </ul>
+        <div class="met_clear"></div>
+        <h4 class="tem_index_more"><a href="product/" title="浏览更多产品" target='_self'>浏览更多产品</a></h4>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+</section>
+
+<section class="tem_index_news ">
+    <div class="tem_inner">
+        <h3 class="tem_index_title">
+            <span>
+                文章列表
+                <p></p>
+            </span>
+        </h3>
+        <ol class="tem_index_news_tab">
+
+            <li class="flex-active"><h3>新闻动态</h3></li>
+
+            <li><h3>行业资讯</h3></li>
+
+            <li><h3>公司新闻</h3></li>
+
+        </ol>
+        <div class="tem_index_news_slides">
+            <div class="slides">
+
+                <ul class="tem_index_news_list  ">
+
+                    <li>
+
+                        <dl>
+                            <dt><a href="news/shownews.php?lang=cn&id=9" title="企业网站应该多长时间备份一次？" target='_self'><img src="include/thumb.php?dir=../public/images/metinfo.gif&x=90&y=90" /></a></dt>
+                            <dd>
+                                <div class="tem_index_news_list_txt">
+                                    <a href="news/shownews.php?lang=cn&id=9" title="企业网站应该多长时间备份一次？" target='_self'>
+                                        <h3>企业网站应该多长时间备份一次？</h3>
+                                        <p>企业网站的信息量一般比较少，使用MetInfo企业网站管理系统让网站备份操作非常简单，我们建议用户没有必要经常去备份网站，一般只需要做到一下几点即可</p>
+                                        <span class='time'>2013-12-26</span>
+                                    </a>
+                                </div>
+                            </dd>
+                        </dl>
+
+                    </li>
+
+                    <li>
+
+                        <dl class="tem_even">
+                            <dt><a href="news/shownews.php?lang=cn&id=10" title="如何选择网站关键词?" target='_self'><img src="include/thumb.php?dir=../public/images/metinfo.gif&x=90&y=90" /></a></dt>
+                            <dd>
+                                <div class="tem_index_news_list_txt">
+                                    <a href="news/shownews.php?lang=cn&id=10" title="如何选择网站关键词?" target='_self'>
+                                        <h3>如何选择网站关键词?</h3>
+                                        <p>考虑用户搜索习惯，而并非企业名称或产品名称，尤其是对于一种新的产品，当市场还没有人知道的时候，自然不会有人去搜索这个关键词，因此选</p>
+                                        <span class='time'>2013-12-26</span>
+                                    </a>
+                                </div>
+                            </dd>
+                        </dl>
+
+                    </li>
+
+                    <li>
+
+                        <dl>
+                            <dt><a href="news/shownews.php?lang=cn&id=1" title="为什么企业要建多国语言网站？" target='_self'><img src="include/thumb.php?dir=../public/images/metinfo.gif&x=90&y=90" /></a></dt>
+                            <dd>
+                                <div class="tem_index_news_list_txt">
+                                    <a href="news/shownews.php?lang=cn&id=1" title="为什么企业要建多国语言网站？" target='_self'>
+                                        <h3>为什么企业要建多国语言网站？</h3>
+                                        <p>许多关键字搜索引擎，尤其是Google，在多语言开发方面能力优异。拥有多语言页面的网站能够最大限度的保障您的网站能够被众多搜索引擎检索并展示</p>
+                                        <span class='time'>2013-12-26</span>
+                                    </a>
+                                </div>
+                            </dd>
+                        </dl>
+
+                    </li>
+
+                    <li>
+
+                        <dl class="tem_even">
+                            <dt><a href="news/shownews.php?lang=cn&id=5" title="MetInfo企业建站系统有何优势？" target='_self'><img src="include/thumb.php?dir=../public/images/metinfo.gif&x=90&y=90" /></a></dt>
+                            <dd>
+                                <div class="tem_index_news_list_txt">
+                                    <a href="news/shownews.php?lang=cn&id=5" title="MetInfo企业建站系统有何优势？" target='_self'>
+                                        <h3>MetInfo企业建站系统有何优势？</h3>
+                                        <p>价格更低：网站建设公司自行开发系统，一般的开发成本都会在千元以上，就算网站建设公司使用自己已经开发的系统建站，客户的一些个性化需要也需要二次开发</p>
+                                        <span class='time'>2013-12-26</span>
+                                    </a>
+                                </div>
+                            </dd>
+                        </dl>
+
+                    </li>
+
+                    <li>
+
+                        <dl>
+                            <dt><a href="news/shownews.php?lang=cn&id=21" title="企业用网站进行网络宣传的优势" target='_self'><img src="include/thumb.php?dir=../public/images/metinfo.gif&x=90&y=90" /></a></dt>
+                            <dd>
+                                <div class="tem_index_news_list_txt">
+                                    <a href="news/shownews.php?lang=cn&id=21" title="企业用网站进行网络宣传的优势" target='_self'>
+                                        <h3>企业用网站进行网络宣传的优势</h3>
+                                        <p>从价格方面考虑，与报纸杂志或电视宣传相比，目前网络宣传费用还是较为低廉的。获得同等的宣传效应，网络宣传的有效千人成本远远低于传统宣传媒体。</p>
+                                        <span class='time'>2013-12-26</span>
+                                    </a>
+                                </div>
+                            </dd>
+                        </dl>
+
+                    </li>
+
+                    <li>
+
+                        <dl class="tem_even">
+                            <dt><a href="news/shownews.php?lang=cn&id=6" title="企业用网站进行网络宣传的优势" target='_self'><img src="include/thumb.php?dir=../public/images/metinfo.gif&x=90&y=90" /></a></dt>
+                            <dd>
+                                <div class="tem_index_news_list_txt">
+                                    <a href="news/shownews.php?lang=cn&id=6" title="企业用网站进行网络宣传的优势" target='_self'>
+                                        <h3>企业用网站进行网络宣传的优势</h3>
+                                        <p>从价格方面考虑，与报纸杂志或电视宣传相比，目前网络宣传费用还是较为低廉的。获得同等的宣传效应，网络宣传的有效千人成本远远低于传统宣传媒体。</p>
+                                        <span class='time'>2013-12-26</span>
+                                    </a>
+                                </div>
+                            </dd>
+                        </dl>
+
+                    </li>
+
+                    <li class="tem_index_more"><a href="news/" title="浏览更多文章" target='_self'>浏览更多文章</a></li>
+                </ul>
+
+                <ul class="tem_index_news_list  met_none">
+
+                    <li>
+
+                        <dl>
+                            <dt><a href="news/shownews.php?lang=cn&id=9" title="企业网站应该多长时间备份一次？" target='_self'><img src="include/thumb.php?dir=../public/images/metinfo.gif&x=90&y=90" /></a></dt>
+                            <dd>
+                                <div class="tem_index_news_list_txt">
+                                    <a href="news/shownews.php?lang=cn&id=9" title="企业网站应该多长时间备份一次？" target='_self'>
+                                        <h3>企业网站应该多长时间备份一次？</h3>
+                                        <p>企业网站的信息量一般比较少，使用MetInfo企业网站管理系统让网站备份操作非常简单，我们建议用户没有必要经常去备份网站，一般只需要做到一下几点即可</p>
+                                        <span class='time'>2013-12-26</span>
+                                    </a>
+                                </div>
+                            </dd>
+                        </dl>
+
+                    </li>
+
+                    <li>
+
+                        <dl class="tem_even">
+                            <dt><a href="news/shownews.php?lang=cn&id=10" title="如何选择网站关键词?" target='_self'><img src="include/thumb.php?dir=../public/images/metinfo.gif&x=90&y=90" /></a></dt>
+                            <dd>
+                                <div class="tem_index_news_list_txt">
+                                    <a href="news/shownews.php?lang=cn&id=10" title="如何选择网站关键词?" target='_self'>
+                                        <h3>如何选择网站关键词?</h3>
+                                        <p>考虑用户搜索习惯，而并非企业名称或产品名称，尤其是对于一种新的产品，当市场还没有人知道的时候，自然不会有人去搜索这个关键词，因此选</p>
+                                        <span class='time'>2013-12-26</span>
+                                    </a>
+                                </div>
+                            </dd>
+                        </dl>
+
+                    </li>
+
+                    <li>
+
+                        <dl>
+                            <dt><a href="news/shownews.php?lang=cn&id=6" title="企业用网站进行网络宣传的优势" target='_self'><img src="include/thumb.php?dir=../public/images/metinfo.gif&x=90&y=90" /></a></dt>
+                            <dd>
+                                <div class="tem_index_news_list_txt">
+                                    <a href="news/shownews.php?lang=cn&id=6" title="企业用网站进行网络宣传的优势" target='_self'>
+                                        <h3>企业用网站进行网络宣传的优势</h3>
+                                        <p>从价格方面考虑，与报纸杂志或电视宣传相比，目前网络宣传费用还是较为低廉的。获得同等的宣传效应，网络宣传的有效千人成本远远低于传统宣传媒体。</p>
+                                        <span class='time'>2013-12-26</span>
+                                    </a>
+                                </div>
+                            </dd>
+                        </dl>
+
+                    </li>
+
+                    <li>
+
+                        <dl class="tem_even">
+                            <dt><a href="news/shownews.php?lang=cn&id=7" title="什么是伪静态？伪静态有何作用?" target='_self'><img src="include/thumb.php?dir=../public/images/metinfo.gif&x=90&y=90" /></a></dt>
+                            <dd>
+                                <div class="tem_index_news_list_txt">
+                                    <a href="news/shownews.php?lang=cn&id=7" title="什么是伪静态？伪静态有何作用?" target='_self'>
+                                        <h3>什么是伪静态？伪静态有何作用?</h3>
+                                        <p>伪静态是相对真实静态来讲的，真实静态会生成一个html或htm后缀的文件，访客能够访问到真实存在的静态页面，而伪静态则没有生成实体静态页面文件</p>
+                                        <span class='time'>2013-12-26</span>
+                                    </a>
+                                </div>
+                            </dd>
+                        </dl>
+
+                    </li>
+
+                    <li>
+
+                        <dl>
+                            <dt><a href="news/shownews.php?lang=cn&id=8" title="如何充分发挥MetInfo的SEO功能" target='_self'><img src="include/thumb.php?dir=../public/images/metinfo.gif&x=90&y=90" /></a></dt>
+                            <dd>
+                                <div class="tem_index_news_list_txt">
+                                    <a href="news/shownews.php?lang=cn&id=8" title="如何充分发挥MetInfo的SEO功能" target='_self'>
+                                        <h3>如何充分发挥MetInfo的SEO功能</h3>
+                                        <p>MetInfo企业网站管理系统以SEO功能完善而著称，但是很多建站的朋友却忽略了网站的真正价值，完全没有考虑网站的优化推广，从而让网站仅仅是一个摆设</p>
+                                        <span class='time'>2013-12-26</span>
+                                    </a>
+                                </div>
+                            </dd>
+                        </dl>
+
+                    </li>
+
+                    <li class="tem_index_more"><a href="news/news.php?lang=cn&class2=5" title="浏览更多文章" target='_self'>浏览更多文章</a></li>
+                </ul>
+
+                <ul class="tem_index_news_list  met_none">
+
+                    <li>
+
+                        <dl>
+                            <dt><a href="news/shownews.php?lang=cn&id=1" title="为什么企业要建多国语言网站？" target='_self'><img src="include/thumb.php?dir=../public/images/metinfo.gif&x=90&y=90" /></a></dt>
+                            <dd>
+                                <div class="tem_index_news_list_txt">
+                                    <a href="news/shownews.php?lang=cn&id=1" title="为什么企业要建多国语言网站？" target='_self'>
+                                        <h3>为什么企业要建多国语言网站？</h3>
+                                        <p>许多关键字搜索引擎，尤其是Google，在多语言开发方面能力优异。拥有多语言页面的网站能够最大限度的保障您的网站能够被众多搜索引擎检索并展示</p>
+                                        <span class='time'>2013-12-26</span>
+                                    </a>
+                                </div>
+                            </dd>
+                        </dl>
+
+                    </li>
+
+                    <li>
+
+                        <dl class="tem_even">
+                            <dt><a href="news/shownews.php?lang=cn&id=5" title="MetInfo企业建站系统有何优势？" target='_self'><img src="include/thumb.php?dir=../public/images/metinfo.gif&x=90&y=90" /></a></dt>
+                            <dd>
+                                <div class="tem_index_news_list_txt">
+                                    <a href="news/shownews.php?lang=cn&id=5" title="MetInfo企业建站系统有何优势？" target='_self'>
+                                        <h3>MetInfo企业建站系统有何优势？</h3>
+                                        <p>价格更低：网站建设公司自行开发系统，一般的开发成本都会在千元以上，就算网站建设公司使用自己已经开发的系统建站，客户的一些个性化需要也需要二次开发</p>
+                                        <span class='time'>2013-12-26</span>
+                                    </a>
+                                </div>
+                            </dd>
+                        </dl>
+
+                    </li>
+
+                    <li>
+
+                        <dl>
+                            <dt><a href="news/shownews.php?lang=cn&id=21" title="企业用网站进行网络宣传的优势" target='_self'><img src="include/thumb.php?dir=../public/images/metinfo.gif&x=90&y=90" /></a></dt>
+                            <dd>
+                                <div class="tem_index_news_list_txt">
+                                    <a href="news/shownews.php?lang=cn&id=21" title="企业用网站进行网络宣传的优势" target='_self'>
+                                        <h3>企业用网站进行网络宣传的优势</h3>
+                                        <p>从价格方面考虑，与报纸杂志或电视宣传相比，目前网络宣传费用还是较为低廉的。获得同等的宣传效应，网络宣传的有效千人成本远远低于传统宣传媒体。</p>
+                                        <span class='time'>2013-12-26</span>
+                                    </a>
+                                </div>
+                            </dd>
+                        </dl>
+
+                    </li>
+
+                    <li>
+
+                        <dl class="tem_even">
+                            <dt><a href="news/shownews.php?lang=cn&id=22" title="什么是伪静态？伪静态有何作用?" target='_self'><img src="include/thumb.php?dir=../public/images/metinfo.gif&x=90&y=90" /></a></dt>
+                            <dd>
+                                <div class="tem_index_news_list_txt">
+                                    <a href="news/shownews.php?lang=cn&id=22" title="什么是伪静态？伪静态有何作用?" target='_self'>
+                                        <h3>什么是伪静态？伪静态有何作用?</h3>
+                                        <p>伪静态是相对真实静态来讲的，真实静态会生成一个html或htm后缀的文件，访客能够访问到真实存在的静态页面，而伪静态则没有生成实体静态页面文件</p>
+                                        <span class='time'>2013-12-26</span>
+                                    </a>
+                                </div>
+                            </dd>
+                        </dl>
+
+                    </li>
+
+                    <li>
+
+                        <dl>
+                            <dt><a href="news/shownews.php?lang=cn&id=23" title="如何充分发挥MetInfo的SEO功能" target='_self'><img src="include/thumb.php?dir=../public/images/metinfo.gif&x=90&y=90" /></a></dt>
+                            <dd>
+                                <div class="tem_index_news_list_txt">
+                                    <a href="news/shownews.php?lang=cn&id=23" title="如何充分发挥MetInfo的SEO功能" target='_self'>
+                                        <h3>如何充分发挥MetInfo的SEO功能</h3>
+                                        <p>MetInfo企业网站管理系统以SEO功能完善而著称，但是很多建站的朋友却忽略了网站的真正价值，完全没有考虑网站的优化推广，从而让网站仅仅是一个摆设</p>
+                                        <span class='time'>2013-12-26</span>
+                                    </a>
+                                </div>
+                            </dd>
+                        </dl>
+
+                    </li>
+
+                    <li class="tem_index_more"><a href="news/news.php?lang=cn&class2=4" title="浏览更多文章" target='_self'>浏览更多文章</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="met_clear"></div>
     </div>
-</div>
+</section>
+
+<section class="tem_index_case tem_index_to">
+    <div class="tem_inner">
+        <h3 class="tem_index_title">
+            <span>
+                案例展示
+                <p></p>
+            </span>
+        </h3>
+        <div class="tem_index_case_list">
+            <ul class="slides">
+
+                <li>
+                    <dl class="tem_list ">
+                        <dt><a href="case/showimg.php?lang=cn&id=5" title="示例案例六" target='_self'><img src="include/thumb.php?dir=../upload/201207/1342431883.jpg&x=240&y=200" title="示例案例六" alt="示例案例六" width="240" height="200" /></a></dt>
+                        <dd>
+                            <h3><a href="case/showimg.php?lang=cn&id=5" title="示例案例六" target='_self'>示例案例六</a></h3>
+                        </dd>
+                    </dl>
+
+
+
+                    <dl class="tem_list ">
+                        <dt><a href="case/showimg.php?lang=cn&id=4" title="示例案例五" target='_self'><img src="include/thumb.php?dir=../upload/201207/1342428068.jpg&x=240&y=200" title="示例案例五" alt="示例案例五" width="240" height="200" /></a></dt>
+                        <dd>
+                            <h3><a href="case/showimg.php?lang=cn&id=4" title="示例案例五" target='_self'>示例案例五</a></h3>
+                        </dd>
+                    </dl>
+
+
+
+                    <dl class="tem_list ">
+                        <dt><a href="case/showimg.php?lang=cn&id=28" title="示例案例八" target='_self'><img src="include/thumb.php?dir=../upload/201207/1342431433.jpg&x=240&y=200" title="示例案例八" alt="示例案例八" width="240" height="200" /></a></dt>
+                        <dd>
+                            <h3><a href="case/showimg.php?lang=cn&id=28" title="示例案例八" target='_self'>示例案例八</a></h3>
+                        </dd>
+                    </dl>
+
+
+
+                    <dl class="tem_list ">
+                        <dt><a href="case/showimg.php?lang=cn&id=3" title="示例案例四" target='_self'><img src="include/thumb.php?dir=../upload/201207/1342431433.jpg&x=240&y=200" title="示例案例四" alt="示例案例四" width="240" height="200" /></a></dt>
+                        <dd>
+                            <h3><a href="case/showimg.php?lang=cn&id=3" title="示例案例四" target='_self'>示例案例四</a></h3>
+                        </dd>
+                    </dl>
+                </li>
+
+                <li>
+                    <dl class="tem_list ">
+                        <dt><a href="case/showimg.php?lang=cn&id=27" title="示例案例七" target='_self'><img src="include/thumb.php?dir=../upload/201207/1342431492.jpg&x=240&y=200" title="示例案例七" alt="示例案例七" width="240" height="200" /></a></dt>
+                        <dd>
+                            <h3><a href="case/showimg.php?lang=cn&id=27" title="示例案例七" target='_self'>示例案例七</a></h3>
+                        </dd>
+                    </dl>
+
+
+
+                    <dl class="tem_list ">
+                        <dt><a href="case/showimg.php?lang=cn&id=1" title="示例案例二" target='_self'><img src="include/thumb.php?dir=../upload/201207/1342431492.jpg&x=240&y=200" title="示例案例二" alt="示例案例二" width="240" height="200" /></a></dt>
+                        <dd>
+                            <h3><a href="case/showimg.php?lang=cn&id=1" title="示例案例二" target='_self'>示例案例二</a></h3>
+                        </dd>
+                    </dl>
+
+
+
+                    <dl class="tem_list ">
+                        <dt><a href="case/showimg.php?lang=cn&id=2" title="示例案例三" target='_self'><img src="include/thumb.php?dir=../upload/201207/1342431628.jpg&x=240&y=200" title="示例案例三" alt="示例案例三" width="240" height="200" /></a></dt>
+                        <dd>
+                            <h3><a href="case/showimg.php?lang=cn&id=2" title="示例案例三" target='_self'>示例案例三</a></h3>
+                        </dd>
+                    </dl>
+
+
+
+                    <dl class="tem_list ">
+                        <dt><a href="case/showimg.php?lang=cn&id=6" title="示例案例一" target='_self'><img src="include/thumb.php?dir=../upload/201207/1342428068.jpg&x=240&y=200" title="示例案例一" alt="示例案例一" width="240" height="200" /></a></dt>
+                        <dd>
+                            <h3><a href="case/showimg.php?lang=cn&id=6" title="示例案例一" target='_self'>示例案例一</a></h3>
+                        </dd>
+                    </dl>
+                </li>
+
+            </ul>
+        </div>
+        <div class="met_clear"></div>
+        <h4 class="tem_index_more"><a href="case/" title="浏览更多案例" target='_self'>浏览更多案例</a></h4>
+    </div>
+</section>
+
+<section class="tem_index_footer">
+    <div class="tem_inner">
+        <dl class="tem_index_footer_contact">
+            <dt><span>联系我们</span></dt>
+            <dd>
+                <ul>
+                    <li><i class="fa fa-map-marker"></i>XX市XX区XXX号XXX栋XXX房</li>
+                    <li><i class="fa fa-phone"></i>0000-888888 13300000000</li>
+                    <li><i class="fa fa-envelope-o"></i>admin@admin.cn</li>
+                </ul>
+            </dd>
+        </dl>
+        <dl class="tem_index_footer_attention">
+            <dt><span>关注我们</span></dt>
+            <dd>
+                <p>关注微博：</p>
+                <ul>
+                    <li class="xinlan"><a href="http://weibo.com/metinfo/" target="_blank" title="关注新浪微博">关注新浪微博</a></li>
+                    <li class="tenxun"><a href="http://t.qq.com/m909059761" target="_blank" title="关注腾讯微博">关注腾讯微博</a></li>
+                    <li class="qq"><a href="http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes" target="_blank" title="联系QQ客服">联系QQ客服</a></li>
+                </ul>
+                <p>微信公众号：</p>
+                <img src="upload/201501/1422258610.jpg" />
+            </dd>
+        </dl>
+        <dl class="tem_index_footer_link">
+            <dt><span>友情链接</span></dt>
+            <dd>
+
+                <div class="tem_txt">
+
+                    <a href="http://www.metinfo.cn" title="企业网站建设" target="_blank">企业网站建设</a>
+
+                    <a href="http://www.metinfo.cn" title="CMS" target="_blank">CMS</a>
+
+                </div>
+
+            </dd>
+        </dl>
+        <div class="met_clear"></div>
+    </div>
+</section>
+

@@ -55,7 +55,6 @@
     <Compile Include="Module\Sitemap.cs" />
     <Compile Include="Module\Summary.cs" />
     <Compile Include="NavPosition.cs" />
-    <Compile Include="WebData.cs" />
     <Compile Include="WebModule.cs" />
     <Compile Include="WebColunm.cs" />
     <Compile Include="WebSite.cs" />

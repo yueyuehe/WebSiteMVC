@@ -1,0 +1,168 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="met_section  met_section_sehed">
+
+    <section class="met_section_head">
+        <a href="http://demo.metinfo.cn/" title="网站首页">网站首页</a> &gt; <a href=../about/show.php?lang =cn&id =19>关于我们</a> > <a href=../feedback/>在线反馈</a>
+    </section>
+
+
+    <aside>
+
+        <section class="met_aside">
+            <h2>关于我们</h2>
+            <div class="met_aside_list">
+                <dl class="list-none navnow"><dt id='part2_19'><a href='../about/show.php?lang=cn&id=19' title='公司简介' class="zm"><span>公司简介</span></a></dt></dl><dl class="list-none navnow"><dt id='part2_25'><a href='../message/' title='在线留言' class="zm"><span>在线留言</span></a></dt></dl><dl class="list-none navnow"><dt id='part2_31' class='on'><a href='../feedback/' title='在线反馈' class="zm"><span>在线反馈</span></a></dt></dl><dl class="list-none navnow"><dt id='part2_98'><a href='../about/show.php?lang=cn&id=98' title='联系我们' class="zm"><span>联系我们</span></a></dt></dl>
+                <div class="met_clear"></div>
+            </div>
+        </section>
+
+
+    </aside>
+
+    <article>
+        <div class="met_article">
+
+            <div class="met_clear"></div>
+
+            <div id="feedback">
+                <form enctype='multipart/form-data' method='POST' class="ui-from" name='myform' action='index.php?action=add'>
+                    <div class="v52fmbx">
+                        <input type='hidden' name='lang' value='cn' />
+                        <input type='hidden' name='fdtitle' value='在线反馈' />
+                        <input type='hidden' name='ip' value='36.48.102.250' />
+                        <input type='hidden' name='id' value='31' />
+                        <input type='hidden' name='fid_url' value='0' />
+                        <h3 class="v52fmbx_hr">在线反馈</h3>
+
+                        <dl>
+                            <dt class="ftype_select">反馈主题</dt>
+                            <dd class="ftype_select">
+                                <div class="fbox">
+                                    <select name='para4' data-required=1><option value=''>不限</option><option value='索取资料'>索取资料</option><option value='产品购买'>产品购买</option><option value='商务合作'>商务合作</option><option value='其他反馈'>其他反馈</option></select>
+                                </div>
+                                <span class="tips"></span>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">姓名</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para5' type='text' placeholder='' data-required=1 />
+                                </div>
+                                <span class="tips"></span>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">职务</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para6' type='text' placeholder='' />
+                                </div>
+                                <span class="tips"></span>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">Email</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para7' type='text' placeholder='' data-required=1 />
+                                </div>
+                                <span class="tips"></span>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">联系电话</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para8' type='text' placeholder='' />
+                                </div>
+                                <span class="tips"></span>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">单位名称</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para9' type='text' placeholder='' />
+                                </div>
+                                <span class="tips"></span>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">省份</dt>
+                            <dd class="ftype_select">
+                                <div class="fbox">
+                                    <select name='para10' data-required=1><option value=''>不限</option><option value='北京'>北京</option><option value='贵州'>贵州</option><option value='湖南'>湖南</option><option value='湖北'>湖北</option><option value='河南'>河南</option><option value='山东'>山东</option><option value='安徽'>安徽</option><option value='江苏'>江苏</option><option value='上海'>上海</option><option value='浙江'>浙江</option><option value='江西'>江西</option><option value='福建'>福建</option><option value='广东'>广东</option><option value='广西'>广西</option><option value='海南'>海南</option><option value='云南'>云南</option><option value='重庆'>重庆</option><option value='四川'>四川</option><option value='西藏'>西藏</option><option value='新疆'>新疆</option><option value='宁夏'>宁夏</option><option value='青海'>青海</option><option value='甘肃'>甘肃</option><option value='陕西'>陕西</option><option value='山西'>山西</option><option value='吉林'>吉林</option><option value='辽宁'>辽宁</option><option value='黑龙江'>黑龙江</option><option value='内蒙古'>内蒙古</option><option value='河北'>河北</option><option value='天津'>天津</option><option value='港澳台'>港澳台</option></select>
+                                </div>
+                                <span class="tips"></span>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">详细地址</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para11' type='text' placeholder='' />
+                                </div>
+                                <span class="tips"></span>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">信息描述</dt>
+                            <dd class="ftype_textarea">
+                                <div class="fbox">
+                                    <textarea name='para12' data-required=1 placeholder=''></textarea>
+                                </div>
+                                <span class="tips"></span>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">您是怎么找到我们的</dt>
+                            <dd class="ftype_checkbox">
+                                <div class="fbox">
+                                    <label><input name='para13_1' data-required=1 type='checkbox' value='搜索引擎' />搜索引擎</label><label><input name='para13_2' type='checkbox' value='网站链接' />网站链接</label><label><input name='para13_3' type='checkbox' value='朋友介绍' />朋友介绍</label><label><input name='para13_4' type='checkbox' value='电视广告' />电视广告</label><label><input name='para13_5' type='checkbox' value='其他方式' />其他方式</label>
+                                </div>
+                                <span class="tips"></span>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">验证码</dt>
+                            <dd class="ftype_input ftype_code">
+                                <div class="fbox">
+                                    <input name='code' data-required='1' type='text' /><img align='absbottom' src='..//member/ajax.php?action=code' onclick=this.src ='../member/ajax.php?action=code&' +Math.random() alt=看不清？点击更换验证码' />
+                                </div>
+                                <span class="tips"></span>
+                            </dd>
+                        </dl>
+
+                        <dl class="noborder">
+                            <dt>&nbsp;</dt>
+                            <dd>
+                                <input type="submit" name="submit" value="提交信息" class="submit" />
+                            </dd>
+                        </dl>
+                    </div>
+                </form>
+                <!--</div>-->
+                <!--</div>-->
+                <div class="clear"></div>
+            </div>
+
+        </div>
+    </article>
+    <div class="met_clear"></div>
+</section>
+

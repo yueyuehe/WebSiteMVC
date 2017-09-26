@@ -1,0 +1,207 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="met_section  ">
+
+
+    <aside>
+
+        <section class="met_aside">
+            <h2>招贤纳士</h2>
+            <div class="met_aside_list">
+                <dl class="list-none navnow"><dt id='part2_36'><a href='../job/' title='招贤纳士' class="zm"><span>招贤纳士</span></a></dt></dl><dl class="list-none navnow"><dt id='part2_10004' class='on'><a href='../job/cv.php?lang=cn&selectedjob=' title='在线应聘' class="zm"><span>在线应聘</span></a></dt></dl>
+                <div class="met_clear"></div>
+            </div>
+        </section>
+
+
+    </aside>
+
+    <article>
+        <div class="met_article">
+
+            <section class="met_article_head">
+                <h1>招贤纳士</h1>
+                <div class="met_position">
+                    <a href="http://demo.metinfo.cn/" title="网站首页">网站首页</a> &gt; 在线应聘
+                </div>
+            </section>
+
+            <div class="met_clear"></div>
+
+            <div id="cvlist">
+                <form enctype='multipart/form-data' method='POST' class="ui-from" name='myform' action='save.php?action=add'>
+                    <div class="v52fmbx">
+                        <input type='hidden' name='lang' value='cn' />
+                        <h3 class="v52fmbx_hr">在线应聘</h3>
+                        <dl>
+                            <dt>应聘职位</dt>
+                            <dd class="ftype_select">
+                                <div class="fbox">
+                                    <select name='jobid'><option value='1'>PHP技术支持</option><option value='2'>网络销售</option><option value='3'>网页UI设计师</option><option value='4'>Web前端开发人员</option><option value='5'>电子商务专员</option></select>
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">姓名</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para18' type='text' placeholder='' data-required=1 />
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">性别</dt>
+                            <dd class="ftype_radio">
+                                <div class="fbox">
+                                    <label><input name='para19' type='radio' value='先生' checked />先生</label><label><input name='para19' type='radio' value='女士' />女士</label>
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">出生年月</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para20' type='text' placeholder='' />
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">籍贯</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para21' type='text' placeholder='' />
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">联系电话</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para22' type='text' placeholder='' />
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">邮编</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para23' type='text' placeholder='' />
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">E–mail</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para24' type='text' placeholder='' data-required=1 />
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">学历</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para25' type='text' placeholder='' />
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">专业</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para26' type='text' placeholder='' />
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">学校</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para27' type='text' placeholder='' />
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">通讯地址</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para28' type='text' placeholder='' />
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">所获奖项</dt>
+                            <dd class="ftype_textarea">
+                                <div class="fbox">
+                                    <textarea name='para29' placeholder=''></textarea>
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">工作经历</dt>
+                            <dd class="ftype_textarea">
+                                <div class="fbox">
+                                    <textarea name='para30' placeholder=''></textarea>
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">业余爱好</dt>
+                            <dd class="ftype_textarea">
+                                <div class="fbox">
+                                    <textarea name='para31' placeholder=''></textarea>
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">近期照片</dt>
+                            <dd class="ftype_upload">
+                                <div class="fbox">
+                                    <input name='para32' type='file' />
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">验证码</dt>
+                            <dd class="ftype_input ftype_code">
+                                <div class="fbox">
+                                    <input name='code' data-required='1' type='text' /><img align='absbottom' src='..//member/ajax.php?action=code' onclick=this.src ='../member/ajax.php?action=code&' +Math.random() alt=看不清？点击更换验证码' />
+                                </div>
+                            </dd>
+                        </dl>
+
+                        <dl class="noborder">
+                            <dt>&nbsp;</dt>
+                            <dd>
+                                <input type="submit" name="submit" value="提交信息" class="submit" />
+                            </dd>
+                        </dl>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </article>
+    <div class="met_clear"></div>
+</section>
+

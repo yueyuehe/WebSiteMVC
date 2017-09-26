@@ -10,7 +10,6 @@ namespace WebSiteDAL.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            ContextKey = "WebSiteDAL.DataContext";
         }
 
         protected override void Seed(WebSiteDAL.DataContext context)

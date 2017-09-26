@@ -6,8 +6,9 @@ using System.Web.Mvc;
 
 namespace WebSiteMVC.Controllers
 {
-    public class HomeController : Controller
+    public class CurriculumVitaeController : Controller
     {
+        // GET: CurriculumVitae
         public ActionResult Index()
         {
             return View();

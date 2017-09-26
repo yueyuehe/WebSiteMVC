@@ -15,7 +15,7 @@ namespace WebSiteManage.Controllers
     {
         private IWebSiteBll bll = new WebSiteBll();
         // GET: WebSite
-        public ActionResult Index(int id)
+        public ActionResult Index(int? id)
         {
             var webSite = bll.Find(model => model.Id == id);
 
@@ -24,22 +24,21 @@ namespace WebSiteManage.Controllers
    
         public ActionResult AddOrUpdate(WebSite webSite)
         {
+            webSite.CreateDate=DateTime.Now;
             //保存文件到项目
             HttpPostedFileBase webLogFile = Request.Files["WebLogo"] as HttpPostedFileBase;
             HttpPostedFileBase webIconFile = Request.Files["WebIcon"] as HttpPostedFileBase;
-            var servicePath = Server.MapPath("~/");
-            //保存网站log
+            //保存网站logo
             var logoPath = this.SaveFile(webLogFile, Common.CommonFilePath.WebLogoImagePath);
             if (!string.IsNullOrEmpty(logoPath))
             {
                 webSite.Logo = logoPath;
             }
-
-            this.SaveFile(webIconFile, Common.CommonFilePath.WebIconImagePath);
-            var IconPath = this.SaveFile(webLogFile, Common.CommonFilePath.WebLogoImagePath);
+            //保存IconUrl
+            var IconPath = this.SaveFile(webIconFile, Common.CommonFilePath.WebLogoImagePath);
             if (!string.IsNullOrEmpty(IconPath))
             {
-                webSite.Logo = IconPath;
+                webSite.Icon = IconPath;
             }
             if (bll.IsExist(webSite.Id))
             {
@@ -74,13 +73,13 @@ namespace WebSiteManage.Controllers
                 {
                     Directory.CreateDirectory(directory);
                 }
+                var fullPath = Path.Combine(directory, newFileName);
                 //保存
-                file.SaveAs(Path.Combine(directory, newFileName));
-                return Path.Combine(path, newFileName);
+                file.SaveAs(fullPath);
+                return fullPath.Replace(servicePath, @"~\");
             }
             return null;
         }
-
 
         public ActionResult Delete(int id)
         {

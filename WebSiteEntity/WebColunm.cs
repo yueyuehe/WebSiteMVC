@@ -48,7 +48,6 @@ namespace WebSiteEntity
         /// </summary>
         public int Level { get; set; }
 
-
         /// <summary>
         /// 前台显示
         /// </summary>

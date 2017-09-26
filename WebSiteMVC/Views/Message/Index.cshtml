@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<section class="met_section  ">
+    <aside>
+        <section class="met_aside">
+            <h2>关于我们</h2>
+            <div class="met_aside_list">
+                <dl class="list-none navnow"><dt id='part2_19'><a href='../about/show.php?lang=cn&id=19' title='公司简介' class="zm"><span>公司简介</span></a></dt></dl><dl class="list-none navnow"><dt id='part2_25' class='on'><a href='../message/' title='在线留言' class="zm"><span>在线留言</span></a></dt></dl><dl class="list-none navnow"><dt id='part2_31'><a href='../feedback/' title='在线反馈' class="zm"><span>在线反馈</span></a></dt></dl><dl class="list-none navnow"><dt id='part2_98'><a href='../about/show.php?lang=cn&id=98' title='联系我们' class="zm"><span>联系我们</span></a></dt></dl>
+                <div class="met_clear"></div>
+            </div>
+        </section>
+    </aside>
+    <article>
+        <div class="met_article">
+            <section class="met_article_head">
+                <h1>在线留言</h1>
+                <div class="met_position">
+                    <a href="http://demo.metinfo.cn/" title="网站首页">网站首页</a> &gt; <a href=../about/show.php?lang =cn&id =19>关于我们</a> > <a href=../message/>在线留言</a>
+                </div>
+            </section>
+            <div class="met_clear"></div>
+            <div id="messagelist">
+                <dl class='list-none metlist'>
+                    <dt class='title'><span class='tt'>2<sup>#</sup></span><span class='name'>李四</span><span class='time'> 2012-07-16 14:21:13</span></dt>
+                    <dd class='info'><span class='tt'>留言内容</span><span class='text'>访问网站出现MySQL Server Error错误怎么办？</span></dd>
+                    <dd class='reinfo'><span class='tt'>管理员回复</span><span class='text'>出现这样的报错不用过于紧张，空间和程序都没有问题，这是由于数据库无法连接造成的。详细请查看：http://www.metinfo.cn/faq/shownews329.htm</span></dd>
+                </dl>
+                <dl class='list-none metlist'>
+                    <dt class='title'><span class='tt'>1<sup>#</sup></span><span class='name'>张三</span><span class='time'> 2012-07-16 14:14:27</span></dt>
+                    <dd class='info'><span class='tt'>留言内容</span><span class='text'>怎么更换浏览器地址栏上网址左边的小图标？</span></dd>
+                    <dd class='reinfo'><span class='tt'>管理员回复</span><span class='text'>可以在后台-企业应用-我的应用-应用市场，找到并下载地址栏图片更换工具，下载后重新上传地址栏小图标即可。</span></dd>
+                </dl>
+                <div class='met_pager'>
+                    <span class='PreSpan'>上一页</span><a href=../message/ class='Ahover'>1</a><span class='NextSpan'>下一页</span>
+                    <span class='PageText'>转至第</span>
+                    <input type='text' id='metPageT' data-pageurl='index.php?lang=cn&page=||1' value='1' />
+                    <input type='button' id='metPageB' value='页' />
+                </div>
+                <form enctype='multipart/form-data' method='POST' class="ui-from" name='myform' action='message.php?action=add'>
+                    <div class="v52fmbx">
+                        <input type='hidden' name='lang' value='cn' />
+                        <h3 class="v52fmbx_hr">提交留言</h3>
+                        <dl>
+                            <dt class="ftype_select">姓名</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para115' type='text' placeholder='' data-required=1 />
+                                </div>
+                                <span class="tips"></span>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">电话</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para116' type='text' placeholder='' />
+                                </div>
+                                <span class="tips"></span>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">Email</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para117' type='text' placeholder='' />
+                                </div>
+                                <span class="tips"></span>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">其他联系方式</dt>
+                            <dd class="ftype_input">
+                                <div class="fbox">
+                                    <input name='para118' type='text' placeholder='如QQ、MSN等' />
+                                </div>
+                                <span class="tips"></span>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">留言内容</dt>
+                            <dd class="ftype_textarea">
+                                <div class="fbox">
+                                    <textarea name='para119' data-required=1 placeholder=''></textarea>
+                                </div>
+                                <span class="tips"></span>
+                            </dd>
+                        </dl>
+
+                        <dl>
+                            <dt class="ftype_select">验证码</dt>
+                            <dd class="ftype_input ftype_code">
+                                <div class="fbox">
+                                    <input name='code' data-required='1' type='text' /><img align='absbottom' src='..//member/ajax.php?action=code' onclick=this.src ='../member/ajax.php?action=code&' +Math.random() alt=看不清？点击更换验证码' />
+                                </div>
+                                <span class="tips"></span>
+                            </dd>
+                        </dl>
+
+                        <dl class="noborder">
+                            <dt>&nbsp;</dt>
+                            <dd>
+                                <input type="submit" name="submit" value="提交信息" class="submit" />
+                            </dd>
+                        </dl>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </article>
+    <div class="met_clear"></div>
+</section>
+
