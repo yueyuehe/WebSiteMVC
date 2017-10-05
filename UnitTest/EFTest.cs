@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WebSiteDAL;
 using WebSiteEntity;
 using System.Collections.Generic;
+using WebSiteBLL.Implements;
 
 namespace UnitTest
 {
@@ -12,13 +13,12 @@ namespace UnitTest
         [TestMethod]
         public void TestInit()
         {
-           var  context = DBContextFactory.GetCurrentContext();
-            var tra = context.Database.BeginTransaction();
+            var context = DBContextFactory.GetCurrentContext();
             var webColumn = new WebColumn();
-            webColumn.Name = "测试测试栏目11";
+            webColumn.Name = "测试测试栏目11123123";
 
             var webSite = new WebSite();
-            webSite.Name = "测试网站33";
+            webSite.Name = "测试网站33123123";
 
             var webModule = new WebModule();
             //webModule.Name = "测试模块22";
@@ -26,24 +26,27 @@ namespace UnitTest
             context.WebSite.Add(webSite);
             context.WebModule.Add(webModule);
             context.SaveChanges();
-            tra.Commit();
         }
         [TestMethod]
-        public void testStatic()
+        public void TestUpdate()
         {
-          
+            var context = DBContextFactory.GetCurrentContext();
 
-     
-
-
+            WebSiteBll bll = new WebSiteBll();
+            var model = bll.FindById(5);
+            model.Name = "我的CXXXXSSSSSSS";
+            bll.Update(model);
+            var db2 = DbSession.DbContent;
+            int count = db2.SaveChanges();
+            string sq = "";
         }
 
 
     }
     public enum A
     {
-      name,
-      age
+        name,
+        age
 
     }
 

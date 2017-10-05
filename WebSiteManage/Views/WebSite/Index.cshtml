@@ -2,6 +2,7 @@
 @{
     Layout = null;
 }
+@model WebSiteEntity.WebSite
 <!DOCTYPE html>
 <html>
 <!-- Mirrored from www.zi-han.net/theme/hplus/form_basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:15 GMT -->
@@ -20,14 +21,13 @@
     <link href="~/Content/plugins/summernote/summernote.css" rel="stylesheet" />
     @*<link href="~/Content/css/plugins/summernote/summernote.css" rel="stylesheet">*@
     <link href="~/Content/css/plugins/summernote/summernote-bs3.css" rel="stylesheet">
-
 </head>
 
 <body class="gray-bg">
     <div class="wrapper wrapper-content animated fadeInRight">
         <div class="row">
             <div class="col-sm-12">
-                <form method="post" class="form-horizontal" enctype="multipart/form-data">
+                <form method="post" class="form-horizontal" enctype="multipart/form-data" >
                     <div class="ibox float-e-margins">
                         <div class="ibox-title">
                             <h3>网站基本信息设置</h3>
@@ -36,14 +36,16 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">网站名称</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control" name="Name">
+                                    @*<input type="text" class="form-control" name="Name" value="" />*@
+                                    @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">网站URL</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control" name="WebUrl">
+                                    @*<input type="text" class="form-control" name="WebUrl">*@
+                                    @Html.TextBoxFor(model => model.WebUrl, new { @class = "form-control" })
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
@@ -446,15 +448,16 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">Title</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control" name="Title">
+                                    @*<input type="text" class="form-control" name="Title">*@
+                                    @Html.TextBoxFor(model => model.Title, new { @class = "form-control" })
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
-
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">关键词</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control" name="Keyword">
+                                    @*<input type="text" class="form-control" name="Keyword">*@
+                                    @Html.TextBoxFor(model => model.Keyword, new { @class = "form-control" })
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
@@ -462,7 +465,8 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">描述</label>
                                 <div class="col-sm-4">
-                                    <textarea class="form-control" rows="3" name="Description"></textarea>
+                                    @*<textarea class="form-control" rows="3" name="Description"></textarea>*@
+                                    @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
                                 </div>
                             </div>
                         </div>
@@ -473,7 +477,8 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">版权信息</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control" name="Copyright">
+                                    @*<input type="text" class="form-control" name="Copyright">*@
+                                    @Html.TextBoxFor(model => model.Copyright, new { @class = "form-control" })
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
@@ -481,7 +486,8 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">地址</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control" name="Place">
+                                    @*<input type="text" class="form-control" name="Place">*@
+                                    @Html.TextBoxFor(model => model.Place, new { @class = "form-control" })
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
@@ -489,7 +495,8 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">邮箱</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control" name="ZipCode">
+                                    @*<input type="text" class="form-control" name="Email">*@
+                                    @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
@@ -497,7 +504,8 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">联系电话</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control" name="Phone">
+                                    @*<input type="text" class="form-control" name="Phone">*@
+                                    @Html.TextBoxFor(model => model.Phone, new { @class = "form-control" })
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
@@ -505,7 +513,8 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">邮编</label>
                                 <div class="col-sm-4">
-                                    <input type="text" class="form-control" name="Email">
+                                    @*<input type="text" class="form-control" name="Email">*@
+                                    @Html.TextBoxFor(model => model.ZipCode, new { @class = "form-control" })
                                 </div>
                             </div>
                             <div class="hr-line-dashed"></div>
@@ -515,7 +524,7 @@
                                 <div class="col-sm-10">
                                     <div id="OtherSummernote"></div>
                                 </div>
-                                <input type="hidden" id="summernoteContent" />
+                                @Html.HiddenFor(model=>model.Others)
                             </div>
                             <div class="form-group">
                                 <div class="col-sm-4 col-sm-offset-2">
@@ -525,6 +534,7 @@
                             </div>
                         </div>
                     </div>
+                    @Html.HiddenFor(model => model.Id)
                 </form>
             </div>
         </div>
@@ -544,11 +554,6 @@
 
         $(document).ready(
             function () {
-                //  $("#OtherSummernote").summernote({
-                //      lang: "zh-CN", height: "150px",
-                //
-                //  })
-
                 $('#OtherSummernote').summernote({
                     lang: "zh-CN", height: "150px",
                     toolbar: [
@@ -567,14 +572,17 @@
                         checkboxClass: "icheckbox_square-green",
                         radioClass: "iradio_square-green",
                     });
+                ///提交按钮
                 $("#btnSave").bind("click", function () {
                     var form = $("form");
                     var actionUrl = "/WebSite/AddOrUpdate";
                     form.attr("action", actionUrl);
                     var markupStr = $('#OtherSummernote').summernote('code');
-                    $("#summernoteContent").val(markupStr);
+                    $("#Others").val(markupStr);
                     form.submit();
                 })
+
+                $('#OtherSummernote').summernote('code', $("#Others").val());
 
             });
     </script>

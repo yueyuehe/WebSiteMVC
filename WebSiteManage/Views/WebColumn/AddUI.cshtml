@@ -2,16 +2,192 @@
 @{
     Layout = null;
 }
-
+@model WebSiteEntity.WebColumn
 <!DOCTYPE html>
-
 <html>
+<!-- Mirrored from www.zi-han.net/theme/hplus/form_basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:15 GMT -->
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Add</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>栏目管理</title>
+    <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
+    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
+    <link href="favicon.ico" rel="shortcut icon">
+    <link href="~/Content/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="~/Content/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="~/Content/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="~/Content/css/animate.min.css" rel="stylesheet">
+    <link href="~/Content/css/style.min862f.css?v=4.1.0" rel="stylesheet">
 </head>
-<body>
-    <div> 
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <form method="post" class="form-horizontal" enctype="multipart/form-data">
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h3>栏目基本信息设置</h3>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">栏目名称</label>
+                                <div class="col-sm-4">
+                                    @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">导航栏显示</label>
+                                <div class="col-sm-4">
+                                    <div class="radio">
+                                        <label>
+                                            @Html.RadioButtonFor(model => model.Position, "TopNav")
+                                            头部导航栏
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            @Html.RadioButtonFor(model => model.Position, "BottomNav")
+                                            尾部导航栏
+                                        </label>
+                                    </div>
+                                    <div class="radio ">
+                                        <label>
+                                            @Html.RadioButtonFor(model => model.Position, "BothNav")
+                                            都显示
+                                        </label>
+                                    </div>
+                                    <div class="radio">
+                                        <label>
+                                            @Html.RadioButtonFor(model => model.Position, "NoneNav")
+                                            都不显示
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">排序号</label>
+                                <div class="col-sm-4">
+                                    @Html.TextBoxFor(model => model.Sort, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ibox-title">
+                            <h3>SEO优化</h3>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Title</label>
+                                <div class="col-sm-4">
+                                    @Html.TextBoxFor(model => model.Title, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">关键词</label>
+                                <div class="col-sm-4">
+                                    @Html.TextBoxFor(model => model.Keyword, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">描述</label>
+                                <div class="col-sm-4">
+                                    @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ibox-title">
+                            <h3>其他设置</h3>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">前台显示</label>
+                                <div class="col-sm-4">
+                                    <label class="radio-inline">
+                                        @Html.RadioButtonFor(model => model.IsShow, "true")
+                                        是
+                                    </label>
+                                    <label class="radio-inline">
+                                        @Html.RadioButtonFor(model => model.IsShow, "false")
+                                        否
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">添加内容</label>
+                                <div class="col-sm-4">
+                                    <label class="radio-inline">
+                                        @Html.RadioButtonFor(model => model.CanAddContent, "true")
+                                        是
+                                    </label>
+                                    <label class="radio-inline">
+                                        @Html.RadioButtonFor(model => model.CanAddContent, "false")
+                                        否
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">新窗口打开</label>
+                                <div class="col-sm-4">
+                                    <label class="radio-inline">
+                                        @Html.RadioButtonFor(model => model.IsOpenNew, "true")
+                                        是
+                                    </label>
+                                    <label class="radio-inline">
+                                        @Html.RadioButtonFor(model => model.IsOpenNew, "false")
+                                        否
+                                    </label>
+                                </div>
+                            </div>
+                            @Html.HiddenFor(model => model.Parent);
+                            @Html.HiddenFor(model => model.WebSite);
+                            @Html.HiddenFor(model => model.Id);
+                            @Html.HiddenFor(model => model.Level);
+                            <div class="form-group">
+                                <div class="col-sm-4 col-sm-offset-2">
+                                    <button id="btnSave" class="btn btn-sm btn-primary" type="button">保存内容</button>
+                                    <button class="btn btn-sm btn-white" type="button">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @Html.HiddenFor(model => model.Id)
+                </form>
+            </div>
+        </div>
     </div>
+
+
+    <script src="~/Content/js/jquery.min.js?v=2.1.4"></script>
+    <script src="~/Content/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="~/Content/js/content.min.js?v=1.0.0"></script>
+    <script src="~/Content/js/plugins/iCheck/icheck.min.js"></script>
+    <script src="~/Content/plugins/summernote/summernote.min.js"></script>
+    <script src="~/Content/plugins/summernote/lang/summernote-zh-CN.js"></script>
+    <script>
+        $(document).ready(
+            function () {
+                $(".i-checks").iCheck(
+                    {
+                        checkboxClass: "icheckbox_square-green",
+                        radioClass: "iradio_square-green",
+                    });
+
+                $("#btnSave").bind("click", function () {
+                    var form = $("form");
+                    var actionUrl = "/WebColumn/Save";
+                    form.attr("action", actionUrl);
+                    form.submit();
+                })
+                $("input[type='radio']").css("margin-top", "4px")
+            });
+    </script>
 </body>
 </html>

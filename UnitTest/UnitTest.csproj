@@ -67,6 +67,10 @@
       <Project>{7e0e2612-b5f2-437d-974a-befe9a5cbb52}</Project>
       <Name>Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WebSiteBLL\WebSiteBLL.csproj">
+      <Project>{370d8757-b349-41fb-9f43-042d285efeef}</Project>
+      <Name>WebSiteBLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebSiteDAL\WebSiteDAL.csproj">
       <Project>{4eef067f-d8f5-4a88-aacd-db2e0640d68b}</Project>
       <Name>WebSiteDAL</Name>

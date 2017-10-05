@@ -15,16 +15,20 @@ namespace WebSiteManage.Controllers
     {
         private IWebSiteBll bll = new WebSiteBll();
         // GET: WebSite
-        public ActionResult Index(int? id)
+        public ActionResult Index(int id=0)
         {
-            var webSite = bll.Find(model => model.Id == id);
-
-            return View();
+            var webSite = bll.FindById(Convert.ToInt32(id));
+            if (webSite == null)
+            {
+                webSite = new WebSite();
+            }
+            return View(webSite);
         }
-   
+
+        [ValidateInput(false)]
         public ActionResult AddOrUpdate(WebSite webSite)
         {
-            webSite.CreateDate=DateTime.Now;
+            webSite.CreateDate = DateTime.Now;
             //保存文件到项目
             HttpPostedFileBase webLogFile = Request.Files["WebLogo"] as HttpPostedFileBase;
             HttpPostedFileBase webIconFile = Request.Files["WebIcon"] as HttpPostedFileBase;
@@ -48,8 +52,7 @@ namespace WebSiteManage.Controllers
             {
                 bll.Add(webSite);
             }
-
-            return View("Index");
+           return RedirectToAction("Index/"+ webSite.Id);
         }
 
         /// <summary>

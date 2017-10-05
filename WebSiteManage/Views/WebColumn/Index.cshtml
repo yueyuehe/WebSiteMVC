@@ -4,22 +4,20 @@
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>H+ 后台主题UI框架 - Bootstrap Table</title>
     <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
     <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
     <link rel="shortcut icon" href="favicon.ico">
     <link href="~/Content/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
     <link href="~/Content/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
-    <link href="~/Content/css/plugins/bootstrap-table/bootstrap-table.min.css" rel="stylesheet">
+    <link href="~/Content/plugins/bootstrap_table/bootstrap-table.min.css" rel="stylesheet" />
     <link href="~/Content/css/animate.min.css" rel="stylesheet">
     <link href="~/Content/css/style.min862f.css?v=4.1.0" rel="stylesheet">
-
+    <link href="~/Content/plugins/bootstrap_table/jquery.treegrid.css" rel="stylesheet" />
 </head>
 <body>
     <button id="add">新增</button>
@@ -29,69 +27,179 @@
     <script src="~/Content/js/jquery.min.js?v=2.1.4"></script>
     <script src="~/Content/js/bootstrap.min.js?v=3.3.6"></script>
     <script src="~/Content/js/content.min.js?v=1.0.0"></script>
-    <script src="~/Content/js/plugins/bootstrap-table/bootstrap-table.min.js"></script>
-    <script src="~/Content/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>
-    <script src="~/Content/js/plugins/bootstrap-table/locale/bootstrap-table-zh-CN.min.js"></script>
-    <script src="~/Content/js/demo/bootstrap-table-demo.min.js"></script>
+    <script src="~/Content/plugins/bootstrap_table/bootstrap-table.min.js"></script>
+    @*<script src="~/Content/js/plugins/bootstrap-table/bootstrap-table-mobile.min.js"></script>*@
+    <script src="~/Content/plugins/bootstrap_table/bootstrap-table-zh-CN.min.js"></script>
+    <script src="~/Content/plugins/bootstrap_table/jquery.treegrid.js"></script>
+    <script src="~/Content/plugins/bootstrap_table/jquery.treegrid.extension.js"></script>
     <script>
         $(function () {
-            $('#table').bootstrapTable({
-                method: "post",
-                url: 'WebColumn/GetWebColumn',
-                idField:"Id",
+            //$('#table').bootstrapTable({
+            //    method: "post",
+            //    url: '/WebColumn/GetWebColumn',
+            //    idField: "Id",  //ID
+            //    striped: true,   //是否隔行变色
+            //    uniqueId: "Id",
+            //    columns: [{
+            //        field: 'Id',
+            //        title: 'id'
+            //    }, {
+            //        field: 'Sort',
+            //        title: '排序'
+            //    }, {
+            //        field: 'Name',
+            //        title: '栏目名称',
+            //        formatter: function (value, row, index) {
+            //            if (hasChild($("#table"), row.Id)) {
+            //                return "☆" + value;
+            //            }
+            //            return "--"
+            //        }
+            //    },
+            //    {
+            //        field: 'Position',
+            //        title: '导航栏显示'
+            //    },
+            //    {
+            //        field: 'WebModuleName',
+            //        title: '所属模块'
+
+            //    },
+            //    {
+            //        field: 'WebModuleCatalog',
+            //        title: '目录名称'
+            //    },
+            //    {
+            //        field: 'Id',
+            //        title: '操作'
+            //    },
+            //     {
+            //         field: 'Parent',
+            //         title: '父ID'
+            //     },
+            //    ],
+            //    onLoadSuccess: function (data) {
+            //        $.each(data, function (index, item) {
+            //            $.each(data, function (index2, item2) {
+            //                if (item.Id == item2.Parent) {
+            //                    $("#table").bootstrapTable('hideRow', { uniqueId: item2.Id });
+            //                }
+            //            })
+            //        })
+            //    },
+            //});
+
+            //treegrid
+            $('#table').treegridData({
+                id: 'Id',
+                parentColumn: 'Parent',
+                type: "post", //请求数据的ajax类型
+                url: '/WebColumn/GetWebColumn',   //请求数据的ajax的url
+                ajaxParams: {}, //请求数据的ajax的data属性
+                expandColumn: 2,//在哪一列上面显示展开按钮
+                striped: true,   //是否各行渐变色
+                bordered: true,  //是否显示边框
+                expandAll: true,  //是否全部展开
                 columns: [{
                     field: 'Id',
-                    title: 'id'
+                    title: 'id',
+                    hidden: true
                 }, {
                     field: 'Sort',
-                    title: '排序'
+                    title: '排序',
+                    hidden: true,
                 }, {
                     field: 'Name',
-                    title: '栏目名称'
+                    title: '栏目名称',
                 },
                 {
                     field: 'Position',
-                    title: '导航栏显示'
+                    title: '导航栏显示',
+                    formatter: function (value, index, row) {
+                        var target = $("<select class=\"form-control\"></select>");
+                        target.append($("<option>头部导航栏</option>"))
+                        target.append($("<option>尾部导航栏</option>"))
+                        target.append($("<option>不显示</option>"))
+                        target.append($("<option>都显示</option>"))
+                        return $("<div>").append(target).html();
+                    }
                 },
-                {
-                    field: 'WebModuleName',
-                    title: '所属模块'
+                        {
+                            field: 'WebModuleName',
+                            title: '所属模块'
 
-                },
-                {
-                    field: 'WebModuleCatalog',
-                    title: '目录名称'
-                },
-                {
-                    field: 'Id',
-                    title: '操作'
-                },
-                 {
-                     field: 'Parent',
-                     title: '父ID'
-                 },
-                ],
-                onLoadSuccess: function (data) {
-                    $.each(data, function (index, item) {
-                        $.each(data, function (index2, item2) {
-                            if (item.Id == item.Parent) {
-                                $("#table").bootstrapTable('hideRow', { index: item2.Id });
-                                var row = $("#table").bootstrapTable('getRowByUniqueId', item.Id);
-                                console.log(row);
+                        },
+                        {
+                            field: 'WebModuleCatalog',
+                            title: '目录名称'
+                        },
+                        {
+                            field: 'Id',
+                            title: '操作',
+                            formatter: function (value, index, item) {
+                                var buttongroup = $("<div class=\"btn-group btn-group-xs\" role=\"group\"></div>");
+                                buttongroup.append($("<button>新增</button>"))
+                                buttongroup.append($("<button>编辑</button>"))
+                                buttongroup.append($("<button>删除</button>"))
+                                return $("<div>").append(buttongroup).html();
                             }
-                        })
-                    })
-                }
+                        },
+                        {
+                            field: 'Parent',
+                            title: '父ID',
+                            hidden: true
+                        },
+                ],
             });
+
+
 
             $("#add").bind("click", function () {
                 var row = {};
                 row.Id = "12";
-                $("#table").bootstrapTable('insertRow', { index: 1, row: row });
-
+                // $("#table").bootstrapTable('insertRow', { index: 1, row: row });
+                $("#table").bootstrapTable('hideRow', { index: 1 });
             })
-
         })
+
+        ///获取子元素
+        function getChilds(table, parentID) {
+            var count = 0;
+            var rows = new Array();
+            var pagerows = table.bootstrapTable("getData", true);
+            $.each(pagerows, function (index, item) {
+                if (item.Parent == parentID) {
+                    rows[count++] = item;
+                }
+            })
+            return rows;
+        }
+
+        //判断一行是否有子元素
+        function hasChild(table, parentID) {
+            var pagerows = table.bootstrapTable("getData", true);
+            $.each(pagerows, function (index, item) {
+                if (item.Parent == parentID) {
+                    return true;
+                }
+            })
+            return false;
+        }
+
+        ///获取所有的子子元素
+        function getAllChilds(table, parentID) {
+            var rows = {};
+            var childRows = getChilds(table, parentID);
+            if (childRows.length > 0) {
+                rows.concat(childRows);
+                $.each(childRows, function (index, item) {
+                    var itemChilds = getAllChilds(table, item.Id)
+                    rows.concat(itemChilds);
+                })
+            }
+            return rows;
+        }
+
     </script>
 </body>
 </html>

@@ -401,6 +401,12 @@
     <Content Include="Content\js\plugins\webuploader\Uploader.swf" />
     <Content Include="Content\js\plugins\webuploader\webuploader.min.js" />
     <Content Include="Content\js\welcome.min.js" />
+    <Content Include="Content\plugins\bootstrap_table\bootstrap-table-zh-CN.min.js" />
+    <Content Include="Content\plugins\bootstrap_table\bootstrap-table.min.css" />
+    <Content Include="Content\plugins\bootstrap_table\bootstrap-table.min.js" />
+    <Content Include="Content\plugins\bootstrap_table\jquery.treegrid.bootstrap3.js" />
+    <Content Include="Content\plugins\bootstrap_table\jquery.treegrid.css" />
+    <Content Include="Content\plugins\bootstrap_table\jquery.treegrid.js" />
     <Content Include="Content\plugins\fullavatareditor\scripts\fullAvatarEditor.js" />
     <Content Include="Content\plugins\fullavatareditor\scripts\jQuery.Cookie.js" />
     <Content Include="Content\plugins\fullavatareditor\scripts\swfobject.js" />
@@ -439,6 +445,7 @@
     <Content Include="Content\plugins\summernote\font\summernote.eot" />
     <Content Include="Content\plugins\summernote\font\summernote.ttf" />
     <Content Include="Content\plugins\summernote\font\summernote.woff" />
+    <Content Include="Content\plugins\bootstrap_table\jquery.treegrid.extension.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

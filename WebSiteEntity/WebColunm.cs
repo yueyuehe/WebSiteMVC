@@ -11,24 +11,40 @@ namespace WebSiteEntity
     /// </summary>
     public class WebColumn
     {
-        //id
+        /// <summary>
+        /// ID
+        /// </summary>
         public int Id { get; set; }
-        //网站
+        /// <summary>
+        /// 所属网站
+        /// </summary>
         public WebSite WebSite { get; set; }
-        //排序
+        /// <summary>
+        /// 栏目排序
+        /// </summary>
         public int Sort { get; set; }
-        //名称
+        /// <summary>
+        /// 栏目名称
+        /// </summary>
         public string Name { get; set; }
-        //导航栏位置
+        /// <summary>
+        /// 导航兰位置
+        /// </summary>
         public NavPosition Position { get; set; }
-        //模块
+        /// <summary>
+        /// 模块
+        /// </summary>
         public WebModule WebModule { get; set; }
         //是否新窗口打开
         public bool IsOpenNew { get; set; }
-        //添加内容
+        /// <summary>
+        /// 是否可添加内容
+        /// </summary>
         public bool CanAddContent { get; set; }
         //SEO
-        //标题
+        /// <summary>
+        /// 标题
+        /// </summary>
         public string Title { get; set; }
         /// <summary>
         /// 关键字
