@@ -19,14 +19,14 @@ namespace WebSiteManage.Controllers
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public ActionResult Index(int id=0)
+        public ActionResult Index(int id = 0)
         {
             //var query = bll.Find(model => model.WebSite.Id == id);
             //return View(query.ToList());
             return View();
         }
 
-        public JsonResult GetWebColumn(int id=0)
+        public JsonResult GetWebColumn(int id = 0)
         {
             var result = new JsonResult();
             var model = new { Id = 1, Sort = 0, Name = "我是父元素", Position = "", WebModuleName = "", WebModuleCatalog = "", Parent = 0 };
@@ -58,8 +58,14 @@ namespace WebSiteManage.Controllers
         /// <returns></returns>
         public ActionResult AddUI()
         {
-            WebColumn model = null;
-            return View(model);
+            ViewBag.parentId = Request["parentID"] ?? "";
+            ViewBag.webSiteId = Request["webSiteId"] ?? "";
+            var dic = new Dictionary<ModuleType, string>();
+            ViewBag.webModule = dic;
+            dic.Add(ModuleType.Article, "文章");
+            dic.Add(ModuleType.Case, "客户案例");
+            dic.Add(ModuleType.Summary, "简介中心");
+            return View();
         }
 
         /// <summary>

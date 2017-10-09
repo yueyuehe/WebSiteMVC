@@ -15,16 +15,17 @@ namespace WebSiteManage.Controllers
     {
         private IWebSiteBll bll = new WebSiteBll();
         // GET: WebSite
-        public ActionResult Index(int id=0)
+        public ActionResult Index(int id = 0)
         {
             var webSite = bll.FindById(Convert.ToInt32(id));
-            if (webSite == null)
-            {
-                webSite = new WebSite();
-            }
             return View(webSite);
         }
 
+        /// <summary>
+        /// 不验证，可输入特殊字符串
+        /// </summary>
+        /// <param name="webSite"></param>
+        /// <returns></returns>
         [ValidateInput(false)]
         public ActionResult AddOrUpdate(WebSite webSite)
         {
@@ -52,11 +53,11 @@ namespace WebSiteManage.Controllers
             {
                 bll.Add(webSite);
             }
-           return RedirectToAction("Index/"+ webSite.Id);
+            return RedirectToAction("Index/" + webSite.Id);
         }
 
         /// <summary>
-        /// 返回相对路径
+        /// 返回文件相对路径
         /// </summary>
         /// <param name="file">文件</param>
         /// <param name="path">相对路径下的目录</param>
@@ -84,6 +85,11 @@ namespace WebSiteManage.Controllers
             return null;
         }
 
+        /// <summary>
+        /// 删除指定ID的网站
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ActionResult Delete(int id)
         {
             bll.Delete(id);
