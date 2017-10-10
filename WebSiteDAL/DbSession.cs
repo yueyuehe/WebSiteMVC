@@ -51,7 +51,6 @@ namespace WebSiteDAL
         /// 提交一个事务
         /// </summary>
         /// <param name="transaction"></param>
-
         public static void Commit(DbContextTransaction transaction)
         {
             transaction.Commit();

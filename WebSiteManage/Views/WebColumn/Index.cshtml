@@ -11,7 +11,7 @@
     <title>H+ 后台主题UI框架 - Bootstrap Table</title>
     <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
     <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
     <link href="~/Content/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
     <link href="~/Content/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
     <link href="~/Content/plugins/bootstrap_table/bootstrap-table.min.css" rel="stylesheet" />
@@ -20,6 +20,7 @@
     <link href="~/Content/plugins/bootstrap_table/jquery.treegrid.css" rel="stylesheet" />
 </head>
 <body>
+    @Html.Hidden("webSiteId", (int)ViewBag.webSiteId);
     <button id="add">新增</button>
     <div>
         <table id="table"></table>
@@ -63,7 +64,6 @@
             //    {
             //        field: 'WebModuleName',
             //        title: '所属模块'
-
             //    },
             //    {
             //        field: 'WebModuleCatalog',
@@ -90,16 +90,37 @@
             //});
 
             //treegrid
+            var urlpath = "/WebColumn/GetWebColumn/" + $("#webSiteId").val();
             $('#table').treegridData({
                 id: 'Id',
-                parentColumn: 'Parent',
+                parentColumn: 'ParentId',
                 type: "post", //请求数据的ajax类型
-                url: '/WebColumn/GetWebColumn',   //请求数据的ajax的url
+                url: urlpath,   //请求数据的ajax的url
                 ajaxParams: {}, //请求数据的ajax的data属性
                 expandColumn: 2,//在哪一列上面显示展开按钮
                 striped: true,   //是否各行渐变色
                 bordered: true,  //是否显示边框
                 expandAll: true,  //是否全部展开
+                loadComplete:function(data){
+                    ///新增子栏目
+                    $("button[name='btnAdd']").bind("click", function () {
+                        var target = $(this).parentsUntil("tr");
+                        console.log(target.length);
+                        console.log(target[0]);
+                        console.log(target[1]);
+
+                    })
+                    //修改
+                    $("button[name='btnUpdate']").bind("click", function () {
+
+
+                    })
+                    //删除
+                    $("button[name='btnDelete']").bind("click", function () {
+
+
+                    })
+                },
                 columns: [{
                     field: 'Id',
                     title: 'id',
@@ -116,34 +137,29 @@
                     field: 'Position',
                     title: '导航栏显示',
                     formatter: function (value, index, row) {
-                        var target = $("<select class=\"form-control\"></select>");
-                        target.append($("<option>头部导航栏</option>"))
-                        target.append($("<option>尾部导航栏</option>"))
-                        target.append($("<option>不显示</option>"))
-                        target.append($("<option>都显示</option>"))
-                        return $("<div>").append(target).html();
+
+                        return value;
+                    }
+
+                }, {
+                    field: 'ModuleType',
+                    title: '所属模块',
+                    formatter: function (value, index, row) {
+
+                        return value;
                     }
                 },
-                        {
-                            field: 'WebModuleName',
-                            title: '所属模块'
-
-                        },
-                        {
-                            field: 'WebModuleCatalog',
-                            title: '目录名称'
-                        },
-                        {
-                            field: 'Id',
-                            title: '操作',
-                            formatter: function (value, index, item) {
-                                var buttongroup = $("<div class=\"btn-group btn-group-xs\" role=\"group\"></div>");
-                                buttongroup.append($("<button>新增</button>"))
-                                buttongroup.append($("<button>编辑</button>"))
-                                buttongroup.append($("<button>删除</button>"))
-                                return $("<div>").append(buttongroup).html();
-                            }
-                        },
+                {
+                    field: "Id",
+                    title: '操作',
+                    formatter: function (value, index, item) {
+                        var buttongroup = $("<div class=\"btn-group btn-group-xs pull-right\" role=\"group\"></div>");
+                        buttongroup.append($("<button type='button' name='btnAdd' class='btn btn-success'>新增</button>"))
+                        buttongroup.append($("<button type='button' name='btnUpdate' class='btn btn-info'>编辑</button>"))
+                        buttongroup.append($("<button type='button' name='btnDelete' class='btn btn-warning'>删除</button>"))
+                        return $("<div>").append(buttongroup).html();
+                    }
+                },
                         {
                             field: 'Parent',
                             title: '父ID',
@@ -152,14 +168,14 @@
                 ],
             });
 
-
-
             $("#add").bind("click", function () {
                 var row = {};
                 row.Id = "12";
                 // $("#table").bootstrapTable('insertRow', { index: 1, row: row });
                 $("#table").bootstrapTable('hideRow', { index: 1 });
             })
+           
+
         })
 
         ///获取子元素

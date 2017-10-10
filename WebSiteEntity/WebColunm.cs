@@ -34,7 +34,7 @@ namespace WebSiteEntity
         /// <summary>
         /// 模块
         /// </summary>
-        public WebModule WebModule { get; set; }
+        public ModuleType ModuleType { get; set; }
         //是否新窗口打开
         public bool IsOpenNew { get; set; }
         /// <summary>

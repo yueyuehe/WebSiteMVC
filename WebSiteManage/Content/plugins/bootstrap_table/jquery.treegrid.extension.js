@@ -30,7 +30,7 @@
                     tr.addClass('treegrid-parent-' + parentIndex);
                     $.each(options.columns, function (index, column) {
                         var td = $('<td></td>');
-
+                        td.attr("name", column.field);
                         if (column.hidden) {
                             td.hide();
                         }
@@ -85,7 +85,7 @@
                         tr.addClass('treegrid-' + (j + i));
                         $.each(options.columns, function (index, column) {
                             var td = $('<td></td>');
-
+                            td.attr("name", column.field)
                             if (column.hidden) {
                                 td.hide();
                             }
@@ -123,6 +123,11 @@
                     if (!options.expandAll) {
                         target.treegrid('collapseAll');
                     }
+                    //渲染完成
+                    if (options.loadComplete) {
+                        options.loadComplete(data);
+                    }
+
                 }
             });
         }
@@ -137,6 +142,7 @@
             return target.treegrid('getAllNodes');
         },
         //组件的其他方法也可以进行类似封装........
+
     };
 
     $.fn.treegridData.defaults = {

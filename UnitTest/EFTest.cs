@@ -24,7 +24,7 @@ namespace UnitTest
             //webModule.Name = "测试模块22";
             context.WebColumn.Add(webColumn);
             context.WebSite.Add(webSite);
-            context.WebModule.Add(webModule);
+          //  context.WebModule.Add(webModule);
             context.SaveChanges();
         }
         [TestMethod]
@@ -40,14 +40,10 @@ namespace UnitTest
             int count = db2.SaveChanges();
             string sq = "";
         }
-
-
     }
     public enum A
     {
         name,
         age
-
     }
-
 }
