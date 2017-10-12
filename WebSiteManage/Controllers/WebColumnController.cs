@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -13,6 +14,7 @@ namespace WebSiteManage.Controllers
     public class WebColumnController : Controller
     {
         private IWebColumnBll bll = new WebColumnBll();
+        private IWebSiteBll webSiteBll = new WebSiteBll();
         // GET: WebColumn
         /// <summary>
         /// 主页
@@ -30,7 +32,7 @@ namespace WebSiteManage.Controllers
         public JsonResult GetWebColumn(int id = 0)
         {
             var json = new JsonResult();
-            var query = bll.Find(m => m.WebSite.Id == id).Select(m=>new {m.Id,m.Name,m.Position,m.ModuleType,ParentId= m.Parent==null?"":m.Parent.Id.ToString() });
+            var query = bll.Find(m => m.WebSite.Id == id).Select(m => new { m.Id, m.Name, m.Position, m.ModuleType, ParentId = m.Parent == null ? "" : m.Parent.Id.ToString() });
             json.Data = query.ToList();
             return json;
             //var result = new JsonResult();
@@ -93,6 +95,11 @@ namespace WebSiteManage.Controllers
                     }
                 }
             }
+            else
+            {
+                ViewBag.parentId = Request["parentId"] ?? "";
+                ViewBag.webSiteId = Request["webSiteId"] ?? "";
+            }
             ViewBag.webModuleList = new SelectList(list, "Value", "Text");
             return View();
         }
@@ -106,12 +113,14 @@ namespace WebSiteManage.Controllers
         {
             //查找指定的id
             var modle = bll.FindById(id);
+            var websiteId = "";
             //存在则删除
             if (modle != null)
             {
+                websiteId = modle.WebSite.Id.ToString();
                 bll.Delete(modle.Id);
             }
-            return RedirectToAction("Index");
+            return RedirectToAction(Path.Combine("Index", websiteId));
         }
 
         /// <summary>
@@ -121,6 +130,23 @@ namespace WebSiteManage.Controllers
         /// <returns></returns>
         public ActionResult Save(WebColumn model)
         {
+            var pid = Request["parentId"] ?? "";
+            var websiteId = Request["webSiteId"] ?? "";
+            //设置父元素
+            if (!string.IsNullOrEmpty(pid))
+            {
+                model.Parent = bll.FindById(Convert.ToInt32(pid));
+                if (model.Parent != null)
+                {
+                    model.Level = model.Parent.Level + 1;
+                }
+
+            }
+            //设置网站
+            if (!string.IsNullOrEmpty(websiteId))
+            {
+                model.WebSite = webSiteBll.FindById(Convert.ToInt32(websiteId));
+            }
             //判断该对象在数据库中是否存在
             var result = bll.IsExist(model.Id);
             if (result)
@@ -133,8 +159,9 @@ namespace WebSiteManage.Controllers
                 //不存在，保存
                 bll.Add(model);
             }
+            var action = Path.Combine("Index", model.WebSite.Id.ToString());
             //返回Index页面
-            return RedirectToAction("Index");
+            return RedirectToAction(action);
         }
     }
 }

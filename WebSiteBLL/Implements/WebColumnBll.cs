@@ -13,12 +13,40 @@ namespace WebSiteBLL.Implements
     {
         public override void Delete(int id)
         {
-            var query = Find(model => model.Id == id);
-            if (query.Count() > 0)
+            //1：找到指定ID的栏目
+            //2：找到栏目的子栏目
+            //  子栏目数量>0
+            //      跳到第一步
+            //  子栏目数量等于0
+            //      删除栏目
+            /*
+            //var modle = FindById(id);
+            if (modle != null)
             {
-                this.Delete(query.ToList()[0]);
+                var childList = FindChilds(id);
+                if (childList.Count == 0)
+                {
+                    Delete(modle);
+                }
+                else
+                {
+                    foreach (var item in childList)
+                    {
+                        Delete(item.Id);
+                    }
+                }
             }
+            */
+            var list = FindAllChilds(id);
+            list.OrderByDescending(m => m.Level);
+            foreach (var item in list)
+            {
+                dal.Delete(item);
+            }
+            dal.Delete(FindById(id));
+            DbSession.SaveChange();
         }
+     
         /// <summary>
         /// 根据ID查找
         /// </summary>
@@ -110,11 +138,21 @@ namespace WebSiteBLL.Implements
         public List<WebColumn> FindAllChilds(int id)
         {
             List<WebColumn> list = new List<WebColumn>();
-            var childList = FindChilds(id);
-            foreach (WebColumn item in childList)
+            var model = FindById(id);
+            if (model.Childs != null && model.Childs.Count > 0)
+            {
+                list.AddRange(model.Childs);
+            }
+            foreach (var item in model.Childs)
             {
                 list.AddRange(FindAllChilds(item.Id));
             }
+            //  List<WebColumn> list = new List<WebColumn>();
+            //  var childList = FindChilds(id);
+            //  foreach (WebColumn item in childList)
+            //  {
+            //      list.AddRange(FindAllChilds(item.Id));
+            //  }
             return list;
         }
     }

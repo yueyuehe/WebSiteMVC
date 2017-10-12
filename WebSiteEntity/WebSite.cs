@@ -11,6 +11,10 @@ namespace WebSiteEntity
     /// </summary>
     public class WebSite
     {
+        public WebSite()
+        {
+            this.WebColumns = new List<WebColumn>();
+        }
         // 网站基本信息
         // 网站ID
         public int Id { get; set; }
@@ -43,6 +47,11 @@ namespace WebSiteEntity
 
         //创建时间
         public DateTime? CreateDate { get; set; }
+
+        /// <summary>
+        /// 网站的栏目
+        /// </summary>
+        public virtual List<WebColumn> WebColumns { get; set; }
 
     }
 }

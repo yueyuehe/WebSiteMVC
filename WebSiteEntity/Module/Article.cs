@@ -13,7 +13,7 @@ namespace WebSiteEntity.Module
         /// <summary>
         /// 标题
         /// </summary>
-        public string Title { get; set; }
+        public string Name { get; set; }
         /// <summary>
         /// 内容
         /// </summary>
@@ -60,10 +60,18 @@ namespace WebSiteEntity.Module
         /// </summary>
         public int PageView { get; set; }
 
-
+        /// <summary>
+        /// 发布人
+        /// </summary>
+        public string PublishUser { get; set; }
         /// <summary>
         /// 所属网站栏目
         /// </summary>
         public WebColumn WebColumn { get; set; }
+
+        //SEO优化
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Keyword { get; set; }
     }
 }

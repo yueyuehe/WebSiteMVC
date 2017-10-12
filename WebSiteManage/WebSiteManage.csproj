@@ -151,6 +151,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ArticleController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\WebColumnController.cs" />
     <Compile Include="Controllers\WebSiteController.cs" />
@@ -473,6 +474,8 @@
     <Content Include="Views\WebColumn\AddUI.cshtml" />
     <Content Include="Views\WebColumn\UpdateUI.cshtml" />
     <Content Include="Views\WebSite\Index.cshtml" />
+    <Content Include="Views\Article\Index.cshtml" />
+    <Content Include="Views\Article\AddUI.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

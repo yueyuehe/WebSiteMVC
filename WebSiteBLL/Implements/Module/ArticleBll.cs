@@ -49,5 +49,24 @@ namespace WebSiteBLL.Implements.Module
         {
             return Find(model => model.WebColumn.Id == id).ToList();
         }
+
+        /// <summary>
+        /// 获取网站所有的文章
+        /// </summary>
+        /// <param name="websiteId"></param>
+        /// <returns></returns>
+        public List<Article> GetArticles(int websiteId)
+        {
+            var artList = new List<Article>();
+            //1获取website 2获取栏目 3：获取栏目下的文章保存到集合
+            var websiteBll = new WebSiteBll();
+            var webSite = websiteBll.FindById(websiteId);
+            foreach (var item in webSite.WebColumns)
+            {
+                artList.AddRange(GetArticlesByColumnID(item.Id));
+            }
+            return artList;
+        }
+
     }
 }

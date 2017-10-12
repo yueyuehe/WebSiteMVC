@@ -11,6 +11,11 @@ namespace WebSiteEntity
     /// </summary>
     public class WebColumn
     {
+        public WebColumn()
+        {
+            this.Childs = new List<WebColumn>();
+        }
+
         /// <summary>
         /// ID
         /// </summary>
@@ -18,7 +23,7 @@ namespace WebSiteEntity
         /// <summary>
         /// 所属网站
         /// </summary>
-        public WebSite WebSite { get; set; }
+        public virtual WebSite WebSite { get; set; }
         /// <summary>
         /// 栏目排序
         /// </summary>
@@ -58,7 +63,11 @@ namespace WebSiteEntity
         /// <summary>
         /// 父栏目
         /// </summary>
-        public WebColumn Parent { get; set; }
+        public virtual WebColumn Parent { get; set; }
+        /// <summary>
+        /// 子元素
+        /// </summary>
+        public virtual List<WebColumn> Childs { get; set; }
         /// <summary>
         ///栏目等级 1,2,3
         /// </summary>

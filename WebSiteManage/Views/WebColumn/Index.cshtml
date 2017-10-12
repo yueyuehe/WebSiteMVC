@@ -21,7 +21,9 @@
 </head>
 <body>
     @Html.Hidden("webSiteId", (int)ViewBag.webSiteId);
-    <button id="add">新增</button>
+    <div class="btn-group btn-group-xs pull-right" role="group">
+        <button id="btnAdd" type="button" class="btn btn-success">新增栏目</button>
+    </div>
     <div>
         <table id="table"></table>
     </div>
@@ -101,24 +103,27 @@
                 striped: true,   //是否各行渐变色
                 bordered: true,  //是否显示边框
                 expandAll: true,  //是否全部展开
-                loadComplete:function(data){
+                loadComplete: function (data) {
                     ///新增子栏目
                     $("button[name='btnAdd']").bind("click", function () {
-                        var target = $(this).parentsUntil("tr");
-                        console.log(target.length);
-                        console.log(target[0]);
-                        console.log(target[1]);
-
+                        var target = $(this).parentsUntil("tbody").filter("tr");
+                        var Id = target.find("td[name='Id']").html();
+                        var url = "/WebColumn/AddUI?parentId=" + Id + "&webSiteId=" + $("#webSiteId").val();
+                        location.href = url;
                     })
                     //修改
                     $("button[name='btnUpdate']").bind("click", function () {
-
-
+                        var target = $(this).parentsUntil("tbody").filter("tr");
+                        var Id = target.find("td[name='Id']").html();
+                        var url = "/WebColumn/AddUI/" + Id;
+                        location.href = url;
                     })
                     //删除
                     $("button[name='btnDelete']").bind("click", function () {
-
-
+                        var target = $(this).parentsUntil("tbody").filter("tr");
+                        var Id = target.find("td[name='Id']").html();
+                        var url = "/WebColumn/Delete/" + Id;
+                        location.href = url;
                     })
                 },
                 columns: [{
@@ -168,14 +173,11 @@
                 ],
             });
 
-            $("#add").bind("click", function () {
-                var row = {};
-                row.Id = "12";
-                // $("#table").bootstrapTable('insertRow', { index: 1, row: row });
-                $("#table").bootstrapTable('hideRow', { index: 1 });
+            ///新增以及栏目
+            $("#btnAdd").bind("click", function () {
+                var url = "/WebColumn/AddUI";
+                location.href = url;
             })
-           
-
         })
 
         ///获取子元素
