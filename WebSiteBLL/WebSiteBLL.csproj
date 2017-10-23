@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Implements\BaseBll.cs" />
     <Compile Include="Implements\Module\ArticleBll.cs" />
+    <Compile Include="Implements\Module\SummaryBll.cs" />
     <Compile Include="Implements\WebColumnBll.cs" />
     <Compile Include="Implements\WebModuleBll.cs" />
     <Compile Include="Implements\WebSiteBll.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="Interface\IWebModuleBll.cs" />
     <Compile Include="Interface\IWebSiteBll.cs" />
     <Compile Include="Interface\Module\IArticleBll.cs" />
+    <Compile Include="Interface\Module\ISummaryBll.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

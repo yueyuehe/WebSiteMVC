@@ -1,0 +1,137 @@
+﻿
+@{
+    Layout = null;
+}
+@model  WebSiteEntity.Module.Summary
+<!DOCTYPE html>
+<html>
+<!-- Mirrored from www.zi-han.net/theme/hplus/form_basic.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Jan 2016 14:19:15 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新增简介</title>
+    <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
+    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
+    <link href="~/favicon.ico" rel="shortcut icon">
+    <link href="~/Content/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="~/Content/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="~/Content/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="~/Content/css/animate.min.css" rel="stylesheet">
+    <link href="~/Content/css/style.min862f.css?v=4.1.0" rel="stylesheet">
+
+    <link href="~/Content/plugins/summernote/summernote.css" rel="stylesheet" />
+    <link href="~/Content/css/plugins/summernote/summernote-bs3.css" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated fadeInRight">
+        <div class="row">
+            <div class="col-sm-12">
+                <form method="post" class="form-horizontal" enctype="multipart/form-data">
+                    @Html.HiddenFor(m => m.Id)
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h3>简介信息设置</h3>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">名称</label>
+                                <div class="col-sm-4">
+                                    @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">内容</label>
+                                <div class="col-sm-10">
+                                    <div class="col-sm-10">
+                                        <div id="Summernote"></div>
+                                    </div>
+                                    @Html.HiddenFor(model => model.Content)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ibox-title">
+                            <h3>SEO优化</h3>
+                        </div>
+                        <div class="ibox-content">
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">Title</label>
+                                <div class="col-sm-4">
+                                    @Html.TextBoxFor(model => model.Title, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">关键词</label>
+                                <div class="col-sm-4">
+                                    @Html.TextBoxFor(model => model.Keyword, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="hr-line-dashed"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">描述</label>
+                                <div class="col-sm-4">
+                                    @Html.TextAreaFor(model => model.Description, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-4 col-sm-offset-2">
+                                    <button id="btnSave" class="btn btn-sm btn-primary" type="button">保存内容</button>
+                                    <button id="btnCancel" class="btn btn-sm btn-white" type="button">取消</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Content/js/jquery.min.js?v=2.1.4"></script>
+    <script src="~/Content/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="~/Content/js/content.min.js?v=1.0.0"></script>
+    <script src="~/Content/js/plugins/iCheck/icheck.min.js"></script>
+    <script src="~/Content/plugins/summernote/summernote.min.js"></script>
+    <script src="~/Content/plugins/summernote/lang/summernote-zh-CN.js"></script>
+    <script>
+        $(document).ready(
+            function () {
+                $(".i-checks").iCheck(
+                    {
+                        checkboxClass: "icheckbox_square-green",
+                        radioClass: "iradio_square-green",
+                    });
+                ///富文本编辑器初始化
+                $('#Summernote').summernote({
+                    lang: "zh-CN", height: "150px",
+                    toolbar: [
+                        // [groupName, [list of button]]
+                        ['style', ['bold', 'italic', 'underline', 'clear']],
+                        ['font', ['strikethrough', 'superscript', 'subscript']],
+                        ['fontsize', ['fontsize']],
+                        ['color', ['color']],
+                        ['para', ['ul', 'ol', 'paragraph']],
+                        ['height', ['height']]
+                    ]
+                });
+                //保存按钮事件
+                $("#btnSave").bind("click", function () {
+                    var form = $("form");
+                    var actionUrl = "/Summary/Save";
+                    form.attr("action", actionUrl);
+                    var markupStr = $('#Summernote').summernote('code');
+                    $("#Content").val(markupStr);
+                    form.submit();
+                })
+                $('#Summernote').summernote('code', $("#Content").val());
+                //取消按钮事件
+                $("#btnCancel").bind("click", function () {
+                    history.go(-1);
+                })
+                //   $("input[type='radio']").css("margin-top", "4px")
+            });
+    </script>
+</body>
+</html>

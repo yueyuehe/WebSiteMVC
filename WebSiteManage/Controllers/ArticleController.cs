@@ -87,7 +87,5 @@ namespace WebSiteManage.Controllers
         {
             return View();
         }
-
-
     }
 }

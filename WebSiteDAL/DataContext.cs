@@ -35,8 +35,8 @@
         public virtual DbSet<WebSite> WebSite { get; set; }
         public virtual DbSet<WebColumn> WebColumn { get; set; }
         //  public virtual DbSet<WebModule> WebModule { get; set; }
-
-         public virtual DbSet<Article> Article { get; set; }
+        public virtual DbSet<Summary> Summary { get; set; }
+        public virtual DbSet<Article> Article { get; set; }
     }
 
     //public class MyEntity

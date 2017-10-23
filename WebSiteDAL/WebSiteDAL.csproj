@@ -55,6 +55,7 @@
     <Compile Include="Implements\BaseDal.cs" />
     <Compile Include="DataContext.cs" />
     <Compile Include="Implements\Module\ArticleDal.cs" />
+    <Compile Include="Implements\Module\SummaryDal.cs" />
     <Compile Include="Interface\IBaseDal.cs" />
     <Compile Include="Implements\WebColumnDal.cs" />
     <Compile Include="Implements\WebSiteDal.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Interface\IWebModuleDal.cs" />
     <Compile Include="Interface\IWebSiteDal.cs" />
     <Compile Include="Interface\Module\IArticleDal.cs" />
+    <Compile Include="Interface\Module\ISummaryDal.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
