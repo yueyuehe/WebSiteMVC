@@ -95,5 +95,15 @@ namespace WebSiteManage.Controllers
             bll.Delete(id);
             return View();
         }
+
+        /// <summary>
+        /// 返回网站的列表
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult List()
+        {
+            var list = bll.Find(m => true);
+            return View(list.ToList());
+        }
     }
 }

@@ -1,0 +1,65 @@
+﻿
+@{
+    Layout = null;
+}
+@model List<WebSiteEntity.WebSite>
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网站列表</title>
+    <meta name="keywords" content="H+后台主题,后台bootstrap框架,会员中心主题,后台HTML,响应式后台">
+    <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
+    <link href="~/favicon.ico" rel="shortcut icon">
+    <link href="~/Content/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="~/Content/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="~/Content/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="~/Content/css/animate.min.css" rel="stylesheet">
+    <link href="~/Content/css/style.min862f.css?v=4.1.0" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-sm-4">
+                    <div class="panel panel-default" name="web_panel">
+                        <div class="panel-heading text-center">
+                            @item.Name
+                            @Html.Hidden(item.Id.ToString());
+                        </div>
+                        <div class="panel-body">
+                            <p>
+                                @item.Description
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <script src="~/Content/js/jquery.min.js?v=2.1.4"></script>
+    <script src="~/Content/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="~/Content/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="~/Content/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="~/Content/js/plugins/layer/layer.min.js"></script>
+    <script src="~/Content/js/hplus.min.js?v=4.1.0"></script>
+    <script src="~/Content/js/contabs.min.js" type="text/javascript"></script>
+    <script src="~/Content/js/plugins/pace/pace.min.js"></script>
+    <script>
+        $("div[name='web_panel']").bind("click", function () {
+            var id = $(this).find("input[type='hidden']").val();
+            $.post("", { "id": id }, function (data) {
+                if (data.result) {
+                    $("div[name='web_panel']").removeClass().addClass("panel panel-default")
+                    $(this).removeClass().addClass("panel panel-success")
+                } else {
+
+                }
+            }, "json")
+        })
+    </script>
+</body>
+</html>

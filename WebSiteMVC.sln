@@ -19,7 +19,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSiteEntity", "WebSiteEnt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSiteManage", "WebSiteManage\WebSiteManage.csproj", "{0F4FE159-80E0-42DF-9E92-D30C65948B2D}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "EFData", "EFData\EFData.shproj", "{30A27899-02D0-42D7-A370-3001FA35CB80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityData", "EntityData\EntityData.csproj", "{8EBE68AE-7D02-45D6-B047-E0F384F7E196}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		EFData\EFData.projitems*{30a27899-02d0-42d7-a370-3001fa35cb80}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -57,6 +64,10 @@ Global
 		{0F4FE159-80E0-42DF-9E92-D30C65948B2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F4FE159-80E0-42DF-9E92-D30C65948B2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F4FE159-80E0-42DF-9E92-D30C65948B2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EBE68AE-7D02-45D6-B047-E0F384F7E196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EBE68AE-7D02-45D6-B047-E0F384F7E196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EBE68AE-7D02-45D6-B047-E0F384F7E196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EBE68AE-7D02-45D6-B047-E0F384F7E196}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

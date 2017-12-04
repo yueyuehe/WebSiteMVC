@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>30a27899-02d0-42d7-a370-3001fa35cb80</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>EFData</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)BLL\Implements\" />
+    <Folder Include="$(MSBuildThisFileDirectory)BLL\Interface\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Common\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)DAL\Implements\EntityDal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)DAL\Interface\IEntityDal.cs" />
+  </ItemGroup>
+</Project>
