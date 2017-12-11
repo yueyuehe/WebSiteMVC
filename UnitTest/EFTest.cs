@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using WebSiteDAL;
-using WebSiteEntity;
-using System.Collections.Generic;
-using WebSiteBLL.Implements;
+//using WebSiteDAL;
+//using WebSiteEntity;
+//using System.Collections.Generic;
+//using WebSiteBLL.Implements;
 
 namespace UnitTest
 {
@@ -13,6 +13,7 @@ namespace UnitTest
         [TestMethod]
         public void TestInit()
         {
+            /*
             var context = DBContextFactory.GetCurrentContext();
             var webColumn = new WebColumn();
             webColumn.Name = "测试测试栏目11123123";
@@ -26,12 +27,13 @@ namespace UnitTest
             context.WebSite.Add(webSite);
           //  context.WebModule.Add(webModule);
             context.SaveChanges();
+            */
         }
         [TestMethod]
         public void TestUpdate()
         {
+            /*
             var context = DBContextFactory.GetCurrentContext();
-
             WebSiteBll bll = new WebSiteBll();
             var model = bll.FindById(5);
             model.Name = "我的CXXXXSSSSSSS";
@@ -39,6 +41,7 @@ namespace UnitTest
             var db2 = DbSession.DbContent;
             int count = db2.SaveChanges();
             string sq = "";
+            */
         }
     }
     public enum A

@@ -9,14 +9,13 @@ using System.Threading.Tasks;
 
 namespace EntityData.Implement
 {
-    public class EntityContext<T> : IEntityContext<T> where T : class, new()
+    public class EntityContext<T, F> : IEntityContext<T> where T : class, IDataEntity<F>, new() where F : DbContext, new()
     {
-        private DbContext context = DBContextFactory.GetCurrentContext<T>();
+
         public void Add(T entity)
         {
-            context.Set<T>().Add(entity);
+            GetDbContext().Set<T>().Add(entity);
         }
-
         /// <summary>
         /// 删除
         /// </summary>
@@ -24,14 +23,18 @@ namespace EntityData.Implement
         public void Delete(T entity)
         {
             //将对象添加到EF管理容器中 ObjectStateManager
-            context.Set<T>().Attach(entity);
-            context.Set<T>().Remove(entity);
+            GetDbContext().Set<T>().Attach(entity);
+            GetDbContext().Set<T>().Remove(entity);
         }
 
+        /// <summary>
+        /// 修改
+        /// </summary>
+        /// <param name="entity"></param>
         public void Update(T entity)
         {
-            context.Set<T>().Attach(entity);
-            context.Entry(entity).State = EntityState.Modified;
+            GetDbContext().Set<T>().Attach(entity);
+            GetDbContext().Entry(entity).State = EntityState.Modified;
         }
         /// <summary>
         /// 按条件查询
@@ -40,7 +43,16 @@ namespace EntityData.Implement
         /// <returns></returns>
         public IQueryable<T> Find(Expression<Func<T, bool>> where)
         {
-            return context.Set<T>().Where(where);
+            return GetDbContext().Set<T>().Where(where);
+        }
+
+        /// <summary>
+        /// 获取DbContext
+        /// </summary>
+        /// <returns></returns>
+        public DbContext GetDbContext()
+        {
+            return DbSession<F>.DbContext;
         }
     }
 }

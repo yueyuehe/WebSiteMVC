@@ -4,16 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EntityData.Interface
+namespace EntityData
 {
-    public interface IDbSession<T>
+    public enum ResultType
     {
         /// <summary>
-        /// 保存修改
+        /// object
         /// </summary>
-        /// <returns></returns>
-        int SaveChange();
-
-
+        DataReader,
+        DataSet,
+        DataTable,
+        List,
+        Dictionary,
     }
 }

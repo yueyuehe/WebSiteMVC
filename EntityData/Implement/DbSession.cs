@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EntityData.Interface;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
@@ -7,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace EntityData.Implement
 {
-    public class DbSession<T> where T : DbContext, new()
+    public class DbSession<T>  where T : DbContext, new()
     {
         /// <summary>
         /// 获取DBContent
         /// </summary>
-        public static T DbContent
+        public static T DbContext
         {
             get
             {
@@ -25,7 +26,7 @@ namespace EntityData.Implement
         /// <returns></returns>
         public static int SaveChange()
         {
-            return DbContent.SaveChanges();
+            return DbContext.SaveChanges();
         }
 
         /// <summary>
@@ -34,7 +35,7 @@ namespace EntityData.Implement
         /// <returns></returns>
         public static DbContextTransaction BeginTransaction()
         {
-            return DbContent.Database.BeginTransaction();
+            return DbContext.Database.BeginTransaction();
         }
 
         /// <summary>

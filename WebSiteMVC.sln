@@ -23,6 +23,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "EFData", "EFData\EFData.shp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityData", "EntityData\EntityData.csproj", "{8EBE68AE-7D02-45D6-B047-E0F384F7E196}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleTest", "ConsoleTest\ConsoleTest.csproj", "{DABCA2E0-CC96-4049-B827-59E3F84475A9}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		EFData\EFData.projitems*{30a27899-02d0-42d7-a370-3001fa35cb80}*SharedItemsImports = 13
@@ -68,6 +70,10 @@ Global
 		{8EBE68AE-7D02-45D6-B047-E0F384F7E196}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EBE68AE-7D02-45D6-B047-E0F384F7E196}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EBE68AE-7D02-45D6-B047-E0F384F7E196}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DABCA2E0-CC96-4049-B827-59E3F84475A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DABCA2E0-CC96-4049-B827-59E3F84475A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DABCA2E0-CC96-4049-B827-59E3F84475A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DABCA2E0-CC96-4049-B827-59E3F84475A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

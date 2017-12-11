@@ -45,6 +45,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
   </ItemGroup>
   <Choose>
     <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
@@ -62,30 +63,39 @@
   </Choose>
   <ItemGroup>
     <Compile Include="EFTest.cs" />
+    <Compile Include="FuClass.cs" />
+    <Compile Include="Migrations\201712050225087_test.cs" />
+    <Compile Include="Migrations\201712050225087_test.Designer.cs">
+      <DependentUpon>201712050225087_test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712050226438_test1.cs" />
+    <Compile Include="Migrations\201712050226438_test1.Designer.cs">
+      <DependentUpon>201712050226438_test1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTest1.cs" />
+    <Compile Include="UnitTest2.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
-      <Project>{7e0e2612-b5f2-437d-974a-befe9a5cbb52}</Project>
-      <Name>Common</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WebSiteBLL\WebSiteBLL.csproj">
-      <Project>{370d8757-b349-41fb-9f43-042d285efeef}</Project>
-      <Name>WebSiteBLL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WebSiteDAL\WebSiteDAL.csproj">
-      <Project>{4eef067f-d8f5-4a88-aacd-db2e0640d68b}</Project>
-      <Name>WebSiteDAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\WebSiteEntity\WebSiteEntity.csproj">
-      <Project>{fd77807c-3626-47af-950a-d2763837a4b2}</Project>
-      <Name>WebSiteEntity</Name>
+    <ProjectReference Include="..\EntityData\EntityData.csproj">
+      <Project>{8EBE68AE-7D02-45D6-B047-E0F384F7E196}</Project>
+      <Name>EntityData</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712050225087_test.resx">
+      <DependentUpon>201712050225087_test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712050226438_test1.resx">
+      <DependentUpon>201712050226438_test1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
