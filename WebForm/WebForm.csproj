@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{49FD4595-2D08-48C9-B790-DBE1DF7AFCD6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebForm</RootNamespace>
+    <AssemblyName>WebForm</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="kitchen-sink\build.js.map" />
+    <Content Include="kitchen-sink\pages\accordion.vue" />
+    <Content Include="kitchen-sink\pages\bars-hide.vue" />
+    <Content Include="kitchen-sink\pages\bars-subnavbar.vue" />
+    <Content Include="kitchen-sink\pages\bars-tabbar-labels.vue" />
+    <Content Include="kitchen-sink\pages\bars-tabbar.vue" />
+    <Content Include="kitchen-sink\pages\bars.vue" />
+    <Content Include="kitchen-sink\pages\calendar.vue" />
+    <Content Include="kitchen-sink\pages\cards.vue" />
+    <Content Include="kitchen-sink\pages\chips.vue" />
+    <Content Include="kitchen-sink\pages\contacts.vue" />
+    <Content Include="kitchen-sink\pages\content-block.vue" />
+    <Content Include="kitchen-sink\pages\data-binding-edit.vue" />
+    <Content Include="kitchen-sink\pages\data-binding.vue" />
+    <Content Include="kitchen-sink\pages\data-table.vue" />
+    <Content Include="kitchen-sink\pages\dynamic-route.vue" />
+    <Content Include="kitchen-sink\pages\fab-dial.vue" />
+    <Content Include="kitchen-sink\pages\fab.vue" />
+    <Content Include="kitchen-sink\pages\forms.vue" />
+    <Content Include="kitchen-sink\pages\grid.vue" />
+    <Content Include="kitchen-sink\pages\home.vue" />
+    <Content Include="kitchen-sink\pages\infinite.vue" />
+    <Content Include="kitchen-sink\pages\lists.vue" />
+    <Content Include="kitchen-sink\pages\login-screen.vue" />
+    <Content Include="kitchen-sink\pages\messages.vue" />
+    <Content Include="kitchen-sink\pages\modals.vue" />
+    <Content Include="kitchen-sink\pages\nested-routes-tabbar.vue" />
+    <Content Include="kitchen-sink\pages\nested-routes-tabs.vue" />
+    <Content Include="kitchen-sink\pages\nested-routes.vue" />
+    <Content Include="kitchen-sink\pages\nested-routes\tabs\tab1.vue" />
+    <Content Include="kitchen-sink\pages\nested-routes\tabs\tab2.vue" />
+    <Content Include="kitchen-sink\pages\nested-routes\tabs\tab3-alternate-content.vue" />
+    <Content Include="kitchen-sink\pages\nested-routes\tabs\tab3.vue" />
+    <Content Include="kitchen-sink\pages\nested-routes\tabs\tabbar-tab1.vue" />
+    <Content Include="kitchen-sink\pages\nested-routes\tabs\tabbar-tab2.vue" />
+    <Content Include="kitchen-sink\pages\nested-routes\tabs\tabbar-tab3-alternate-content.vue" />
+    <Content Include="kitchen-sink\pages\nested-routes\tabs\tabbar-tab3.vue" />
+    <Content Include="kitchen-sink\pages\photo-browser.vue" />
+    <Content Include="kitchen-sink\pages\preloader.vue" />
+    <Content Include="kitchen-sink\pages\progressbar.vue" />
+    <Content Include="kitchen-sink\pages\pull-refresh.vue" />
+    <Content Include="kitchen-sink\pages\searchbar.vue" />
+    <Content Include="kitchen-sink\pages\smart-select.vue" />
+    <Content Include="kitchen-sink\pages\sortable.vue" />
+    <Content Include="kitchen-sink\pages\swipeout.vue" />
+    <Content Include="kitchen-sink\pages\swiper.vue" />
+    <Content Include="kitchen-sink\pages\tabs-swipeable.vue" />
+    <Content Include="kitchen-sink\pages\tabs.vue" />
+    <Content Include="kitchen-sink\pages\timeline-calendar.vue" />
+    <Content Include="kitchen-sink\pages\timeline-horizontal.vue" />
+    <Content Include="kitchen-sink\pages\timeline-vertical.vue" />
+    <Content Include="kitchen-sink\pages\virtual-list-vue.vue" />
+    <Content Include="kitchen-sink\pages\virtual-list.vue" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="kitchen-sink\app.js" />
+    <Content Include="kitchen-sink\build.js" />
+    <Content Include="kitchen-sink\framework7\framework7.ios.colors.min.css" />
+    <Content Include="kitchen-sink\framework7\framework7.ios.min.css" />
+    <Content Include="kitchen-sink\framework7\framework7.js" />
+    <Content Include="kitchen-sink\framework7\framework7.material.colors.min.css" />
+    <Content Include="kitchen-sink\framework7\framework7.material.min.css" />
+    <Content Include="kitchen-sink\index.html" />
+    <Content Include="kitchen-sink\routes.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50640</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50640/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

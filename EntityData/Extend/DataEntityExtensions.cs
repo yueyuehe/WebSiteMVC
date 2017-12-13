@@ -62,8 +62,7 @@ namespace EntityData.Extend
             context.Entry(dataEntity).State = EntityState.Modified;
             context.SaveChanges();
         }
-
-
+        
         /// <summary>
         /// 从数据库中删除当前数据对象（对应的数据库记录）。
         /// 备注:删除后仍然可以使用 Save 方法将对象再次保存到数据库。

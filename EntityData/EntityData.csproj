@@ -52,6 +52,7 @@
     <Compile Include="DBContextFactory.cs" />
     <Compile Include="Extend\DataEntityExtensions.cs" />
     <Compile Include="Extend\EntityContextExtensions.cs" />
+    <Compile Include="Helper\SqlHelper.cs" />
     <Compile Include="Helper\Unit.cs" />
     <Compile Include="Implement\DbSession.cs" />
     <Compile Include="Implement\EntityContext.cs" />
