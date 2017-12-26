@@ -62,7 +62,7 @@ namespace EntityData.Extend
             context.Entry(dataEntity).State = EntityState.Modified;
             context.SaveChanges();
         }
-        
+
         /// <summary>
         /// 从数据库中删除当前数据对象（对应的数据库记录）。
         /// 备注:删除后仍然可以使用 Save 方法将对象再次保存到数据库。
@@ -82,7 +82,7 @@ namespace EntityData.Extend
         #region 加载数据 判断是否存在
 
         /// <summary>
-        /// 从数据库读取
+        /// 从数据库读取  必须有Key特性
         /// </summary>
         /// <param name="dataEntity">数据实体</param>
         public static bool Read<T>(this IDataEntity<T> dataEntity) where T : DbContext, new()
@@ -112,7 +112,7 @@ namespace EntityData.Extend
         }
 
         /// <summary>
-        /// 判断数据实体是否在数据库中存在
+        /// 判断数据实体是否在数据库中存在 必须有Key特性
         /// </summary>
         /// <param name="dataEntity">数据实体</param>
         public static bool ExistsInDb<T>(this IDataEntity<T> dataEntity) where T : DbContext, new()
@@ -151,6 +151,10 @@ namespace EntityData.Extend
             if (dataEntity.GetType().FullName != target.GetType().FullName)
             {
                 throw new Exception("类型不一致");
+            }
+            else
+            {
+                throw new Exception("未实现");
             }
         }
 

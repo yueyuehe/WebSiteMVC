@@ -12,12 +12,12 @@ namespace EntityData.Extend
 {
     public static class EntityContextExtensions
     {
-
+        /*
         /// <summary>
         /// 在当前操作环境中启动一个事务，显示的支持简单的事务调用。
         /// </summary>
         /// <returns> 事务对象，事务启动成功返回事务对象实例</returns>
-        public static void CreateTransaction<T>(this IEntityContext<T> context) where T : class, IDataEntity, new()
+        public static  void CreateTransaction<T>(this IEntityContext<T> context) where T : class, IDataEntity, new()
         {
 
         }
@@ -36,6 +36,8 @@ namespace EntityData.Extend
         {
 
         }
+      */
+      
         #region 普通执行
 
 

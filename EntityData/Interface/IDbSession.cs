@@ -13,7 +13,5 @@ namespace EntityData.Interface
         /// </summary>
         /// <returns></returns>
         int SaveChange();
-
-
     }
 }

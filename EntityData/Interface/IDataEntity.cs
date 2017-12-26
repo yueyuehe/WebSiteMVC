@@ -13,22 +13,16 @@ namespace EntityData.Interface
     /// </summary>
     public interface IDataEntity
     {
-    }
-    public class DataEntity : IDataEntity
-    {
 
     }
-
+   
+    /// <summary>
+    /// 泛型实体类接口
+    /// </summary>
+    /// <typeparam name="T">DbContext类型</typeparam>
     public interface IDataEntity<T> : IDataEntity where T : DbContext, new()
     {
       T  GetDbContext();
-
     }
-    public class DataEntity<T> : IDataEntity<T> where T : DbContext, new()
-    {
-        public T GetDbContext()
-        {
-            return DbSession<T>.DbContext;
-        }
-    }
+  
 }

@@ -12,6 +12,7 @@ namespace EntityData
     {
         /// <summary>
         /// 创建DataContext 获取的是当前请求的DataContext
+        /// 目的:一次请求处理 只需要一个DbContext，防止多次产生DbContext产生性能消耗。
         /// </summary>
         /// <returns></returns>
         public static T GetCurrentContext<T>() where T : DbContext,new ()
